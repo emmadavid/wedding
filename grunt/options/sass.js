@@ -12,9 +12,11 @@ module.exports = {
 			includePaths: require( 'bourbon' ).includePaths
 		},
 		dist: {
-			files: {
-				'main.css' : project.scss.files
-			}
+			src: [ project.scss.files ],
+			dest: project.sqs.stylePath + '/site.css'
+			//files: {
+			//	project.sqs.stylePath + '/site.css' : project.scss.files
+			//}
 		}
 	}
 };

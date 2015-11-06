@@ -3,6 +3,8 @@
  */
 
 var path = require('path'),
+	sqsPath = path.normalize(process.cwd() + '/sqs'),
+	sqsStylePath = path.normalize(sqsPath + '/styles'),
 	gruntConfigPath = path.normalize(process.cwd() + '/grunt/config'),
 	srcPath = path.normalize(process.cwd() + '/src'),
 	jsPath = path.normalize(srcPath + '/main/webapp/static/js'),
@@ -10,6 +12,11 @@ var path = require('path'),
 	scssFiles = path.normalize(scssPath + '/**.scss');
 
 module.exports = {
+
+	sqs: {
+		path: sqsPath,
+		stylePath: sqsStylePath
+	},
 
 	js: {
 		path: jsPath
