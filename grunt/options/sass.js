@@ -9,7 +9,10 @@ var project = require( '../config/project' );
 module.exports = {
 	sass: {
 		options: {
-			includePaths: require( 'bourbon' ).includePaths
+			includePaths: [
+				require( 'bourbon' ).includePaths,
+				'node_modules/bourbon-neat/app/assets/stylesheets'
+			]
 		},
 		dist: {
 			src: [ project.scss.files ],

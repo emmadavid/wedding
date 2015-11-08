@@ -1,0 +1,38 @@
+@mixin horizontal-list( $spacing ) {
+	list-style-type: none;
+	float: left;
+	display: inline-block;
+	margin: 0 $spacing 0 0;
+	padding: 0;
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+nav {
+	margin: em( -89px ) auto 0 auto;
+	width: $column * 12;
+
+	a {
+		font-size: em( 12px );
+		letter-spacing: em( 2px );
+		text-transform: uppercase;
+
+		&.active {
+			color: $white;
+		}
+	}
+
+	li {
+		@include horizontal-list( em( 32px ) );
+
+		&:first-child {
+			margin-left: em( 99px );
+		}
+
+		&:nth-child( 3n ) {
+			margin-left: em( 294px );
+		}
+	}
+}
