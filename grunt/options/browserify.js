@@ -17,13 +17,13 @@ module.exports = {
 			},
 
 			transform: [[ 'babelify', {
-				presets: [ 'es2015', 'react' ]
+				presets: [ 'es2015' ]
 			}]]
 		},
 
 		dist: {
 			src: [ project.js.path + '/main.js' ],
-			dest: 'app.js'
+			dest: project.sqs.scriptPath + '/app.js'
 		}
 	}
 };

@@ -1,0 +1,6 @@
+@mixin margin-after( $margin ) {
+	-webkit-margin-after: $margin;
+	-moz-margin-after: $margin;
+	-o-margin-after: $margin;
+	margin-after: $margin;
+}

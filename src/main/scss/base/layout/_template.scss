@@ -16,14 +16,22 @@ h6 {
 	font-size: $base-font-size;
 	line-height: $heading-line-height;
 	margin: 0 0 $small-spacing;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: em(32px);
 }
 
 p {
+	font-weight: 200;
 	margin: 0 0 $small-spacing;
 }
 
 ul {
 	@include padding-start(0);
+	@include margin-before(0);
+	@include margin-after(0);
 }
 
 a {
@@ -41,7 +49,12 @@ a {
 img {
 	margin: 0;
 	max-width: 100%;
+	outline-style: none;
 	width: 100%;
+}
+
+section {
+	height: 100vh;
 }
 
 #site {

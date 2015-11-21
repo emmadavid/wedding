@@ -3,7 +3,7 @@
         {.repeated section items}
         <li class="{.section active}active{.end}">
             {.section collection}
-            <a href="{fullUrl}">{navigationTitle}</a>
+            <a href="#{urlId}">{navigationTitle}</a>
             {.end}
         </li>
         {.end}

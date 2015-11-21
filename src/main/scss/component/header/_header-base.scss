@@ -1,7 +1,7 @@
 header {
 	@include fill-parent;
 	padding-top: 30px;
-	position: relative;
+	position: absolute;
 	z-index: $header-zindex;
 
 	h1 {

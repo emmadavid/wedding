@@ -16,10 +16,7 @@ module.exports = {
 		},
 		dist: {
 			src: [ project.scss.files ],
-			dest: project.sqs.stylePath + '/site.css'
-			//files: {
-			//	project.sqs.stylePath + '/site.css' : project.scss.files
-			//}
+			dest: project.sqs.stylePath + '/app.css'
 		}
 	}
 };
