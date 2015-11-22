@@ -1,0 +1,16 @@
+header {
+	h1 {
+		margin: 0;
+		text-align: center;
+	}
+
+	img {
+		@include transition( opacity $base-duration $base-timing );
+		opacity: $logo-opacity-default;
+		width: $logo-width-default;
+
+		&:hover {
+			opacity: $logo-opacity-hover;
+		}
+	}
+}

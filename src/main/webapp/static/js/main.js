@@ -5,10 +5,14 @@ var slick = require( 'slick-carousel' );
 
 document.addEventListener('DOMContentLoaded', function() {
 	$( '#hero').slick({
-		autoplay: true,
+		autoplay: false,
 		autoplaySpeed: 5000,
-		centerMode: true,
+		centerMode: false,
 		pauseOnHover: false
+	});
+
+	$( '.slick-slide', '#hero' ).each(function() {
+		$(this).css('background-position', (this.dataset.fpX * 100) + '%' + ' ' + (this.dataset.fpY * 100) + '%');
 	});
 });
 

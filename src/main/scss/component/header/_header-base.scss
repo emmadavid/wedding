@@ -1,15 +1,9 @@
 header {
+	box-shadow: inset 0 10em 5em -2em rgba( 0, 0, 0, 0.20 );
+	height: 200px;
+
 	@include fill-parent;
 	padding-top: 30px;
 	position: absolute;
 	z-index: $header-zindex;
-
-	h1 {
-		margin: 0;
-		text-align: center;
-	}
-
-	img {
-		width: 235px;
-	}
 }
