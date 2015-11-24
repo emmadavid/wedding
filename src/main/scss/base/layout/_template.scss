@@ -57,8 +57,8 @@ ul {
 
 a {
 	@include transition(color $base-duration $base-timing);
-	color: rgba( $base-font-color, .6 );
-	font-weight: 600;
+	color: rgba( $base-font-color, $link-opacity-default );
+	font-weight: $link-weight-default;
 	text-decoration: none;
 
 	&:active,

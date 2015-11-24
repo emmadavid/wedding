@@ -1,9 +1,7 @@
 header {
-	box-shadow: inset 0 10em 5em -2em rgba( 0, 0, 0, 0.20 );
-	height: 200px;
-
-	@include fill-parent;
-	padding-top: 30px;
+	box-shadow: inset 0 10em 5em -3.5em rgba( 0, 0, 0, 0.3 );
+	height: em( $header-height-default );
 	position: absolute;
+	width: 100%;
 	z-index: $header-zindex;
 }

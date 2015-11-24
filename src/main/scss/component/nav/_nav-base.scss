@@ -1,22 +1,10 @@
-@mixin horizontal-list( $spacing ) {
-	list-style-type: none;
-	float: left;
-	display: inline-block;
-	margin: 0 $spacing 0 0;
-	padding: 0;
-
-	&:last-child {
-		margin-right: 0;
-	}
-}
-
 nav {
-	margin-top: -80px;
+	@include vertical-align;
 
 	ul {
-		display: flex;
-		flex-flow: row nowrap;
-		justify-content: center;
+		@include display( flex );
+		@include flex-flow( row nowrap );
+		@include justify-content( center );
 	}
 
 	li {
@@ -27,11 +15,11 @@ nav {
 			margin-left: 0;
 		}
 
-		&:nth-child(3) {
+		&:nth-child( 3 ) {
 			margin-right: em( ( $logo-width-default / 2 ) + $nav-item-space );
 		}
 
-		&:nth-child(4) {
+		&:nth-child( 4 ) {
 			margin-left: em( ( $logo-width-default / 2 ) + $nav-item-space );
 		}
 	}

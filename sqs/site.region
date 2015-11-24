@@ -9,17 +9,9 @@
         <div id="site">
             <header id="header" role="banner">
                 {.section website}
-
-                    <h1 id="logo">
-                        {.section logoImageUrl}
-                            <img src="{logoImageUrl}?format=1500w" alt="{siteTitle}" />
-                        {.or}
-                            {siteTitle}
-                        {.end}
-                    </h1>
-                    {.section siteTagLine}
-                        <p id="tagline">{@}</p>
-                    {.end}
+                <h1 id="logo" style="background-image: url('{logoImageUrl}?format=1500w');">
+                    <a href="/">{siteTitle}</a>
+                </h1>
                 {.end}
                 <squarespace:navigation navigationId="site-nav" template="navigation" />
             </header>
