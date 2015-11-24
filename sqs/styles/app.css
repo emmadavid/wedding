@@ -132,7 +132,9 @@ nav {
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
   position: relative;
-  top: 50%; }
+  top: 50%;
+  position: absolute;
+  width: 100%; }
   nav ul {
     display: -webkit-box;
     display: -moz-box;

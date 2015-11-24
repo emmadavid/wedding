@@ -1,5 +1,7 @@
 nav {
 	@include vertical-align;
+	position: absolute;
+	width: 100%;
 
 	ul {
 		@include display( flex );
