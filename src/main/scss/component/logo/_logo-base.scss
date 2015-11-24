@@ -1,0 +1,19 @@
+#logo {
+	@include hide-text;
+	@include transition( opacity $base-duration $base-timing );
+	@include vertical-align;
+	background-repeat: no-repeat;
+	background-size: contain;
+	margin: 0 auto;
+	opacity: $logo-opacity-default;
+	width: $logo-width-default;
+	z-index: $logo-zindex;
+
+	&:hover {
+		opacity: $logo-opacity-hover;
+	}
+
+	a {
+		display: block;
+	}
+}

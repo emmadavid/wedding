@@ -1,3 +1,84 @@
-body {
+// Type Scale: http://type-scale.com/?size=16&scale=1.414&text=A%20Visual%20Type%20Scale&webfont=Raleway&font-family='Raleway'&font-weight=400&font-family-headers=&font-weight-headers=inherit&background-color=white&font-color=%23333
 
+html {
+	font-size: $base-font-size;
+}
+
+body {
+	@include font-feature-settings( 'liga kern pnum' );
+	@include font-smoothing;
+	background-color: $gray-darkest;
+	color: $base-font-color;
+	line-height: $base-line-height;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-size: $base-font-size;
+	line-height: $base-heading-line-height;
+	margin: 1.414em 0 0.5em;
+	text-transform: uppercase;
+}
+
+h1 {
+	margin-top: 0;
+	font-size: 3.998em;
+}
+
+h2 {
+	font-size: 2.827em;
+}
+
+h3 {
+	font-size: 1.999em;
+}
+
+h4 {
+	font-size: 1.414em;
+}
+
+small,
+.font_small {
+	font-size: 0.707em;
+}
+
+p {
+	font-weight: 200;
+	margin-bottom: 1.3em;
+}
+
+ul {
+	@include padding-start(0);
+	@include margin-before(0);
+	@include margin-after(0);
+}
+
+a {
+	@include transition(color $base-duration $base-timing);
+	color: rgba( $base-font-color, $link-opacity-default );
+	font-weight: $link-weight-default;
+	text-decoration: none;
+
+	&:active,
+	&:focus,
+	&:hover {
+		color: $base-font-color;
+	}
+}
+
+img {
+	margin: 0;
+	max-width: 100%;
+	outline-style: none;
+	width: 100%;
+}
+
+section {
+	height: 100vh;
+}
+
+#site {
+	@include outer-container( 100% );
 }

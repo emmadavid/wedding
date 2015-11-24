@@ -1,5 +1,16 @@
-@import "bourbon";
-
 // Base
 @import "base/settings";
+
+@import "bourbon";
+@import "neat";
+@import "neat-helpers";
+
+@import "base/mixins";
 @import "base/layout";
+
+// Component
+@import "component/header";
+@import "component/logo";
+@import "component/nav";
+@import "component/hero";
+@import "component/about";

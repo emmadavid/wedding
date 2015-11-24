@@ -1,0 +1,36 @@
+nav {
+	@include vertical-align;
+
+	ul {
+		@include display( flex );
+		@include flex-flow( row nowrap );
+		@include justify-content( center );
+	}
+
+	li {
+		list-style-type: none;
+		margin-left: em( $nav-item-space );
+
+		&:first-child {
+			margin-left: 0;
+		}
+
+		&:nth-child( 3 ) {
+			margin-right: em( ( $logo-width-default / 2 ) + $nav-item-space );
+		}
+
+		&:nth-child( 4 ) {
+			margin-left: em( ( $logo-width-default / 2 ) + $nav-item-space );
+		}
+	}
+
+	a {
+		font-size: em( $nav-item-font-size );
+		letter-spacing: em( $nav-item-letter-spacing );
+		text-transform: uppercase;
+
+		&.active {
+			color: $white;
+		}
+	}
+}

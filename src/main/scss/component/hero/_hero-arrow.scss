@@ -1,0 +1,82 @@
+.slick-arrow {
+	&.slick-hidden {
+		display: none;
+	}
+}
+
+.slick-prev,
+.slick-next {
+	background: transparent;
+	border: none;
+	color: transparent;
+	cursor: pointer;
+	display: block;
+	font-size: 0;
+	height: 20px;
+	line-height: 0;
+	margin-top: -10px;
+	outline: none;
+	padding: 0;
+	position: absolute;
+	top: 50%;
+	width: 20px;
+	z-index: $hero-arrow-zindex;
+
+	&:hover,
+	&:focus {
+		background: transparent;
+		color: transparent;
+		outline: none;
+
+		&:before {
+			opacity: $hero-opacity-on-hover;
+		}
+	}
+
+	&:before {
+		@include font-smoothing( antialiased );
+		color: $hero-arrow-color;
+		font-family: 'squarespace-ui-font';
+		font-size: 25px;
+		line-height: 1;
+		opacity: $hero-opacity-default;
+	}
+
+	&.slick-disabled:before {
+		opacity: $hero-opacity-not-active;
+	}
+}
+
+.slick-prev {
+	left: 9px;
+
+	[dir="rtl"] & {
+		left: auto;
+		right: -25px;
+	}
+
+	&:before {
+		content: $hero-prev-character;
+
+		[dir="rtl"] & {
+			content: $hero-next-character;
+		}
+	}
+}
+
+.slick-next {
+	right: 18px;
+
+	[dir="rtl"] & {
+		left: -25px;
+		right: auto;
+	}
+
+	&:before {
+		content: $hero-next-character;
+
+		[dir="rtl"] & {
+			content: $hero-prev-character;
+		}
+	}
+}

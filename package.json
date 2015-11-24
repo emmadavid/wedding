@@ -1,27 +1,27 @@
 {
-	"name": "wedding",
-	"version": "1.0.0",
-	"description": "Wedding website.",
-	"main": "index.js",
-	"repository": {
-		"type": "git",
-		"url": ""
-	},
-	"author": "David Villavicencio",
-	"license": "private",
-	"private": true,
-	"dependencies": {
-		"babelify": "7.2.0",
-		"babel-preset-es2015": "6.1.2",
-		"babel-preset-react": "6.1.2",
-		"bourbon": "4.2.6",
-		"grunt": "0.4.5",
-		"grunt-babel": "6.0.0",
-		"grunt-browserify": "4.0.1",
-		"grunt-sass": "1.1.0",
-		"load-grunt-tasks": "3.3.0",
-		"matchdep": "1.0.0",
-		"react": "0.14.2",
-		"react-dom": "0.14.2"
-	}
+  "name": "wedding",
+  "version": "1.0.0",
+  "description": "Wedding website.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "David Villavicencio",
+  "license": "private",
+  "private": true,
+  "dependencies": {
+    "babel-preset-es2015": "6.1.2",
+    "babelify": "7.2.0",
+    "bourbon": "4.2.6",
+    "bourbon-neat": "1.7.2",
+    "grunt": "0.4.5",
+    "grunt-babel": "6.0.0",
+    "grunt-browserify": "4.0.1",
+    "grunt-sass": "1.1.0",
+    "jquery": "2.1.4",
+    "load-grunt-tasks": "3.3.0",
+    "matchdep": "1.0.0",
+    "slick-carousel": "1.5.8"
+  }
 }
