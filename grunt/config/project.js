@@ -21,7 +21,20 @@ module.exports = {
 	},
 
 	js: {
-		path: jsPath
+		path: jsPath,
+		in: [
+			jsPath + '/vendor/jquery-2.1.4.min.js',
+			jsPath + '/vendor/slick.min.js',
+			jsPath + '/vendor/velocity.min.js',
+			jsPath + '/vendor/velocity.ui.js',
+			jsPath + '/vendor/underscore-min.js',
+			jsPath + '/vendor/backbone-min.js',
+			jsPath + '/main.js',
+			jsPath + '/component/app/view/AppView.js',
+			jsPath + '/component/splash/view/SplashView.js',
+			jsPath + '/component/hero/view/HeroView.js'
+		],
+		out: sqsScriptPath + '/app.js'
 	},
 
 	scss: {
