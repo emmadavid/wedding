@@ -1,0 +1,3 @@
+{.repeated section items}
+    <div id="splash-layer-{tags}" style="background-image: url({assetUrl}?format=750w)"></div>
+{.end}

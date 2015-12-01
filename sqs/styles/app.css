@@ -17,7 +17,7 @@ body {
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
   font-smooth: always;
-  background-color: #1c1513;
+  background-color: #060606;
   color: #ffffff;
   line-height: 1.45; }
 
@@ -82,12 +82,13 @@ img {
   width: 100%; }
 
 section {
-  height: 100vh; }
+  min-height: 100vh; }
 
 #site {
   max-width: 100%;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  opacity: 0; }
   #site::after {
     clear: both;
     content: "";
@@ -118,6 +119,7 @@ header {
   background-size: contain;
   margin: 0 auto;
   opacity: 0.8;
+  display: none;
   width: 160px;
   z-index: 1; }
   #logo:hover {
@@ -170,6 +172,20 @@ nav {
     text-transform: uppercase; }
     nav a.active {
       color: #ffffff; }
+
+#splash {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 2; }
+  #splash > div {
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: 0;
+    height: 90vh;
+    position: absolute;
+    width: 92vw; }
 
 .slick-slider {
   -ms-touch-action: pan-y;

@@ -76,9 +76,11 @@ img {
 }
 
 section {
-	height: 100vh;
+	min-height: 100vh;
 }
 
 #site {
 	@include outer-container( 100% );
+	//display: none;
+	opacity: 0;
 }

@@ -1,19 +1,8 @@
-'use strict';
+var castacencio = castacencio || {};
 
-var $ = require( 'jquery' );
-var slick = require( 'slick-carousel' );
-
-document.addEventListener('DOMContentLoaded', function() {
-	$( '#hero').slick({
-		autoplay: false,
-		autoplaySpeed: 5000,
-		centerMode: false,
-		pauseOnHover: false
-	});
-
-	$( '.slick-slide', '#hero' ).each(function() {
-		$(this).css('background-position', (this.dataset.fpX * 100) + '%' + ' ' + (this.dataset.fpY * 100) + '%');
-	});
+$( function() {
+	// Kick off app initialization.
+	castacencio.appView = new castacencio.AppView({ el: $( 'body' ) });
 });
 
 /**
@@ -53,8 +42,3 @@ document.addEventListener('DOMContentLoaded', function() {
 	// The event subscription that reloads images on resize.
 	document.addEventListener('resize', loadAllImages);
 }());
-
-
-
-
-
