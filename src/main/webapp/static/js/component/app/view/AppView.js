@@ -7,6 +7,7 @@ castacencio.AppView = Backbone.View.extend({
 	render: function() {
 		this.splashComponent();
 		this.heroComponent();
+		this.navComponent();
 
 		return this;
 	},
@@ -16,6 +17,12 @@ castacencio.AppView = Backbone.View.extend({
 			el: this.$( '#splash' ),
 			site: this.$(  '#site' ),
 			logo: this.$( '#logo' )
+		});
+	},
+
+	navComponent: function() {
+		var navView = new castacencio.NavView({
+			el: this.$( 'nav' )
 		});
 	},
 
