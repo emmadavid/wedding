@@ -1,0 +1,30 @@
+#our-story {
+	a {
+		@include transition(border-color $base-duration $base-timing);
+
+		display: block;
+		max-width: em( 268px );
+		max-height: em( 268px );
+		border: em( 17.5px ) solid rgba(255,255,255,0.65);
+		height: 100%;
+		width: 100%;
+		margin-left: 75%;
+
+		&:first-child {
+			margin-bottom: 40px;
+		}
+
+		&:hover {
+			border-color: $white;
+		}
+	}
+
+	.gallery-container {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		padding-top: 25%;
+	}
+}

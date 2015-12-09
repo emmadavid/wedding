@@ -50,9 +50,9 @@ p {
 }
 
 ul {
-	@include padding-start(0);
-	@include margin-before(0);
-	@include margin-after(0);
+	@include padding-start( 0 );
+	@include margin-before( 0 );
+	@include margin-after( 0 );
 }
 
 a {
@@ -77,10 +77,10 @@ img {
 
 section {
 	min-height: 100vh;
+	position: relative;
 }
 
 #site {
 	@include outer-container( 100% );
-	//display: none;
 	opacity: 0;
 }

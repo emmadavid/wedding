@@ -27,27 +27,19 @@
                 {@|apply hero.block}
             </squarespace:query>
         </section>
-        <section id="emma-test">
-            <squarespace:query collection="emma">
-                {.repeated section items}
-                <div style="height: 100vh;background: url({assetUrl}) no-repeat center center scroll; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;"></div>
-                {.end}
+        <section id="our-story">
+            <squarespace:query collection="our-story-gallery/bg">
+                <div style="height: 100vh;background: url({item.assetUrl}) no-repeat top center scroll; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;"></div>
             </squarespace:query>
+            <div class="gallery-container">
+                <squarespace:query collection="our-story-gallery/emma">
+                    <a style="background: url({item.assetUrl}) no-repeat center center scroll; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;" id="story-emma" href="#"></a>
+                </squarespace:query>
+                <squarespace:query collection="our-story-gallery/david">
+                    <a style="background: url({item.assetUrl}) no-repeat center center scroll; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;" id="story-david" href="#"></a>
+                </squarespace:query>
+            </div>
         </section>
-        <!--<section id="about">-->
-            <!--<squarespace:query collection="blog/content">-->
-                <!--{.repeated section items}-->
-                <!--<div class="section-image content-fill">-->
-                    <!--<img class="content-fill" {@|image-meta}/>-->
-                <!--</div>-->
-                <!--<div class="section-image-overlay"></div>-->
-                <!--<div class="section-copy">-->
-                    <!--<h2>{customContent.title}</h2>-->
-                    <!--{customContent.content.html}-->
-                <!--</div>-->
-                <!--{.end}-->
-            <!--</squarespace:query>-->
-        <!--</section>-->
     </main>
     <footer id="footer" class="footer">
         <squarespace:block-field id="footerBlocks" columns="12"/>
