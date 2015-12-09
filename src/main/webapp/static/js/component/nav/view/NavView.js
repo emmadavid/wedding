@@ -1,13 +1,25 @@
 castacencio.NavView = Backbone.View.extend({
 
+	events: {
+		'click a': 'scrollToSection'
+	},
+
 	initialize: function() {
-		console.log('NavView');
-		console.dir(this.$el);
+		this.defaultDuration = 250;
+
 		this.render();
 	},
 
 	render: function() {
 		return this;
+	},
+
+	scrollToSection: function( event ) {
+		event.preventDefault();
+
+		$( event.target.hash )
+			.velocity("scroll", { duration: this.defaultDuration }, 'easeInSine')
+			.velocity({ opacity: 1 });
 	},
 
 	destroy: function() {
