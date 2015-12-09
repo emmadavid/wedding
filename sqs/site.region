@@ -27,20 +27,27 @@
                 {@|apply hero.block}
             </squarespace:query>
         </section>
-        <section id="about">
-            <squarespace:query collection="blog/content">
+        <section id="emma-test">
+            <squarespace:query collection="emma">
                 {.repeated section items}
-                <div class="section-image content-fill">
-                    <img class="content-fill" {@|image-meta}/>
-                </div>
-                <div class="section-image-overlay"></div>
-                <div class="section-copy">
-                    <h2>{customContent.title}</h2>
-                    {customContent.content.html}
-                </div>
+                <div style="height: 100vh;background: url({assetUrl}) no-repeat center center scroll; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;"></div>
                 {.end}
             </squarespace:query>
         </section>
+        <!--<section id="about">-->
+            <!--<squarespace:query collection="blog/content">-->
+                <!--{.repeated section items}-->
+                <!--<div class="section-image content-fill">-->
+                    <!--<img class="content-fill" {@|image-meta}/>-->
+                <!--</div>-->
+                <!--<div class="section-image-overlay"></div>-->
+                <!--<div class="section-copy">-->
+                    <!--<h2>{customContent.title}</h2>-->
+                    <!--{customContent.content.html}-->
+                <!--</div>-->
+                <!--{.end}-->
+            <!--</squarespace:query>-->
+        <!--</section>-->
     </main>
     <footer id="footer" class="footer">
         <squarespace:block-field id="footerBlocks" columns="12"/>
