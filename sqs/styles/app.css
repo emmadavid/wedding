@@ -369,3 +369,37 @@ nav {
     text-align: center;
     width: 100%;
     z-index: 1; }
+
+#accommodations {
+  background-color: #ffffff; }
+  #accommodations h2 {
+    border-bottom: 2px solid #dd2f37;
+    color: #dd2f37;
+    font-weight: 500;
+    line-height: .7;
+    margin-bottom: 10px;
+    text-indent: 2.5em; }
+  #accommodations h3 {
+    font-size: 1.75em;
+    margin-bottom: 0;
+    text-transform: none; }
+  #accommodations p {
+    font-size: 1.125em;
+    font-weight: 400;
+    margin-top: 0; }
+  #accommodations .section-image {
+    position: relative; }
+  #accommodations .content {
+    position: absolute;
+    margin: 100px;
+    width: 25em; }
+  #accommodations .button {
+    background-color: #c73f42;
+    border-radius: 8px;
+    width: 200px;
+    height: 55px;
+    display: inline-block;
+    text-align: center;
+    line-height: 53px;
+    font-weight: 400;
+    color: white; }

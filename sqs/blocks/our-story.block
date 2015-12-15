@@ -1,0 +1,16 @@
+<h2>Our Story</h2>
+<div class="gallery-container">
+    {.repeated section items}
+        {.equal? urlId "emma"}
+            <a style="background: url({assetUrl}) no-repeat center center scroll; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;" id="story-emma" href="#"></a>
+        {.or}{.end}
+        {.equal? urlId "david"}
+            <a style="background: url({assetUrl}) no-repeat center center scroll; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;" id="story-david" href="#"></a>
+        {.or}{.end}
+    {.end}
+</div>
+{.repeated section items}
+    {.equal? urlId "bg"}
+        <div style="height: 100vh;background: url({assetUrl}) no-repeat top center scroll; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;"></div>
+    {.or}{.end}
+{.end}
