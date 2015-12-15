@@ -8,27 +8,34 @@ castacencio.AppView = Backbone.View.extend({
 		this.splashComponent();
 		this.heroComponent();
 		this.navComponent();
+		this.ourStoryComponent();
 
 		return this;
 	},
 
 	splashComponent: function() {
-		var splashView = new castacencio.SplashView({
+		new castacencio.SplashView({
 			el: this.$( '#splash' ),
-			site: this.$(  '#site' ),
+			site: this.$( '#site' ),
 			logo: this.$( '#logo' )
 		});
 	},
 
 	navComponent: function() {
-		var navView = new castacencio.NavView({
+		new castacencio.NavView({
 			el: this.$( 'nav' )
 		});
 	},
 
 	heroComponent: function() {
-		var heroView = new castacencio.HeroView({
+		new castacencio.HeroView({
 			el: this.$( '#hero' )
+		});
+	},
+
+	ourStoryComponent: function() {
+		new castacencio.OurStoryView({
+			el: this.$( '#our-story' )
 		});
 	}
 

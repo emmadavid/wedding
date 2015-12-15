@@ -33,7 +33,8 @@ module.exports = {
 			jsPath + '/component/app/view/AppView.js',
 			jsPath + '/component/splash/view/SplashView.js',
 			jsPath + '/component/nav/view/NavView.js',
-			jsPath + '/component/hero/view/HeroView.js'
+			jsPath + '/component/hero/view/HeroView.js',
+			jsPath + '/component/section/view/OurStoryView.js'
 		],
 		out: sqsScriptPath + '/app.js'
 	},

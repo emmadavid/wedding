@@ -82,7 +82,9 @@ img {
   width: 100%; }
 
 section {
-  min-height: 100vh; }
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden; }
 
 #site {
   max-width: 100%;
@@ -324,24 +326,46 @@ nav {
     [dir="rtl"] .slick-next:before {
       content: ""; }
 
-#about {
-  position: relative;
-  text-align: center; }
-  #about .section-image {
+#our-story {
+  background-color: #ffffff; }
+  #our-story a {
+    -webkit-transition: border-color 150ms ease;
+    -moz-transition: border-color 150ms ease;
+    transition: border-color 150ms ease;
+    border: 1.09375em solid rgba(255, 255, 255, 0.65);
+    display: inline-block;
+    height: 100%;
+    max-width: 16.75em;
+    max-height: 16.75em;
+    min-height: 16.75em;
+    width: 100%; }
+    #our-story a:first-child {
+      margin-bottom: 2.1875em; }
+    #our-story a:hover {
+      border-color: rgba(255, 255, 255, 0.9); }
+  #our-story h2 {
+    border-bottom: 2px solid #dd2f37;
+    color: #dd2f37;
+    font-weight: 500;
+    line-height: .7;
+    margin-bottom: 10px;
+    text-indent: 2.5em; }
+  #our-story .gallery-container {
+    background: url("/assets/story-names.svg") no-repeat left 15.1875em scroll;
+    background-size: 35%;
+    height: 100%;
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0; }
-  #about .section-copy {
-    margin: 0 auto;
-    padding: 10.3125em 0;
-    position: relative;
-    width: 50%; }
-  #about .section-image-overlay {
+    right: 13%;
+    text-align: right;
+    top: 25%;
+    width: 27.5em; }
+  #our-story .overlay {
+    background-color: rgba(32, 23, 19, 0.7);
+    display: none;
+    flex-direction: column;
+    height: 100%;
+    padding: 10em;
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(32, 23, 19, 0.7); }
+    text-align: center;
+    width: 100%;
+    z-index: 1; }
