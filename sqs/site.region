@@ -40,17 +40,13 @@
                     capicola mollit, id bresaola lorem tail ea alcatra ipsum bacon.
                     Consequat kevin dolore reprehenderit veniam eu pig aute sunt, short ribs nulla.</p>
             </div>
-            <h2>Our Story</h2>
-            <div class="gallery-container">
-                <squarespace:query collection="our-story-gallery/emma">
-                    <a style="background: url({item.assetUrl}) no-repeat center center scroll; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;" id="story-emma" href="#"></a>
-                </squarespace:query>
-                <squarespace:query collection="our-story-gallery/david">
-                    <a style="background: url({item.assetUrl}) no-repeat center center scroll; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;" id="story-david" href="#"></a>
-                </squarespace:query>
-            </div>
-            <squarespace:query collection="our-story-gallery/bg">
-                <div style="height: 100vh;background: url({item.assetUrl}) no-repeat top center scroll; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;"></div>
+            <squarespace:query collection="our-story-gallery">
+                {@|apply our-story.block}
+            </squarespace:query>
+        </section>
+        <section id="accommodations">
+            <squarespace:query collection="accommodations-gallery">
+                {@|apply accommodations.block}
             </squarespace:query>
         </section>
     </main>

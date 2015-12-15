@@ -1,0 +1,47 @@
+// TODO: Clean up with settings/variables. Repetitive code.
+#accommodations {
+	background-color: $white;
+
+	h2 {
+		border-bottom: 2px solid $brand-red;
+		color: $brand-red;
+		font-weight: 500;
+		line-height: .7;
+		margin-bottom: 10px;
+		text-indent: em( 40px );
+	}
+
+	h3 {
+		font-size: em( 28px );
+		margin-bottom: 0;
+		text-transform: none;
+	}
+
+	p {
+		font-size: em( 18px );
+		font-weight: 400;
+		margin-top: 0;
+	}
+
+	.section-image {
+		position: relative;
+	}
+
+	.content {
+		position: absolute;
+		margin: 100px;
+		width: em( 400px );
+	}
+
+	.button {
+		background-color: #c73f42;
+		border-radius: 8px;
+		width: 200px;
+		height: 55px;
+		display: inline-block;
+		text-align: center;
+		line-height: 53px;
+		font-weight: 400;
+		color: white;
+	}
+}
