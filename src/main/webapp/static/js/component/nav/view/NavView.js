@@ -18,8 +18,7 @@ castacencio.NavView = Backbone.View.extend({
 		event.preventDefault();
 
 		$( event.target.hash )
-			.velocity("scroll", { duration: this.defaultDuration }, 'easeInSine')
-			.velocity({ opacity: 1 });
+			.velocity("scroll", { duration: this.defaultDuration }, 'easeInSine');
 	},
 
 	destroy: function() {

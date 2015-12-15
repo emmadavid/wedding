@@ -1,30 +1,56 @@
+// TODO: Clean up with settings/variables.
 #our-story {
-	a {
-		@include transition(border-color $base-duration $base-timing);
+	background-color: $white;
 
-		display: block;
+	a {
+		@include transition( border-color $base-duration $base-timing );
+
+		border: em( 17.5px ) solid rgba(255,255,255,0.65);
+		display: inline-block;
+		height: 100%;
 		max-width: em( 268px );
 		max-height: em( 268px );
-		border: em( 17.5px ) solid rgba(255,255,255,0.65);
-		height: 100%;
+		min-height: em( 268px );
 		width: 100%;
-		margin-left: 75%;
 
 		&:first-child {
-			margin-bottom: 40px;
+			margin-bottom: em( 35px );
 		}
 
 		&:hover {
-			border-color: $white;
+			border-color: rgba( 255, 255, 255, 0.9 );
 		}
 	}
 
+	h2 {
+		border-bottom: 2px solid $brand-red;
+		color: $brand-red;
+		font-weight: 500;
+		line-height: .7;
+		margin-bottom: 10px;
+		text-indent: em( 40px );
+	}
+
 	.gallery-container {
-		position: absolute;
-		top: 0;
-		right: 0;
-		width: 100%;
+		background: url( '/assets/story-names.svg' ) no-repeat left em( 243px ) scroll;
+		background-size: 35%;
 		height: 100%;
-		padding-top: 25%;
+		position: absolute;
+		right: 13%;
+		text-align: right;
+		top: 25%;
+		width: em( 440px );
+	}
+
+	.overlay {
+		background-color: rgba( 32, 23, 19, .7 );
+		display: none;
+		flex-direction: column;
+		height: 100%;
+		padding: 10em;
+		position: absolute;
+		text-align: center;
+		width: 100%;
+		z-index: 1;
 	}
 }

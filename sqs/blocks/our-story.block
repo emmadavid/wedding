@@ -1,9 +1,0 @@
-<script>console.log({@|json-pretty});</script>
-
-<squarespace:query collection="our-story-gallery/emma">
-    <script>console.log({@|json-pretty});</script>
-</squarespace:query>
-
-<!--{.repeated section items}-->
-<!--<div data-fp-x="{mediaFocalPoint.x}" data-fp-y="{mediaFocalPoint.y}" style="height: 100vh;background: url({assetUrl}) no-repeat center center scroll; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;"></div>-->
-<!--{.end}-->
