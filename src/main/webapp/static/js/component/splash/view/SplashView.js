@@ -1,4 +1,4 @@
-castacencio.SplashView = Backbone.View.extend({
+Castacencio.View.SplashView = Backbone.View.extend({
 
 	initialize: function( options ) {
 		_.bindAll( this, 'fadeOutSplashImage', 'shrinkMonogram', 'fadeInSite', 'destroy' );

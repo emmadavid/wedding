@@ -1,0 +1,28 @@
+.instagram-image {
+	float: left;
+	margin: 0 1vw 2vw 1vw;
+	height: 20vw;
+	width: 20vw;
+	max-height: 290px;
+	max-width: 290px;
+	overflow: hidden;
+
+	a {
+		transition: transform .15s ease-in-out;
+		display: inline-block;
+		height: 100%;
+		width: 100%;
+
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-attachment: scroll;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+
+		&:hover {
+			transform: scale(1.15);
+		}
+	}
+}

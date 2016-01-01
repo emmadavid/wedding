@@ -49,6 +49,20 @@
                 {@|apply accommodations.block}
             </squarespace:query>
         </section>
+        <section id="family-and-friends">
+            <div class="content">
+                <h2>05 29 16</h2>
+                <p class="hashtag">&#35;<span>love</span>and<span>cocktails</span></p>
+                <p><strong>Take a picture by yourself, with your kids, with your dog, or favorite food. Or take a few pictures with each of those.
+                    We want to see your save the date baloons! Our wedding memories began the day we started planning, and this is just going to add to it.</strong></p>
+                <p>Bacon ipsum dolor amet biltong capicola est in, esse ham hock veniam chuck enim in proident. T-bone tail short ribs voluptate
+                    ribeye cillum. Bresaola fugiat ut cupim. Laboris tail tenderloin veniam spare ribs id ribeye in cow doner rump lorem ullamco est.
+                    Porchetta deserunt ball tip, kevin exercitation consequat duis frankfurter ipsum.</p>
+            </div>
+            <div class="instagram">
+                <a href="#" class="next">NEXT</a>
+            </div>
+        </section>
     </main>
     <footer id="footer" class="footer">
         <squarespace:block-field id="footerBlocks" columns="12"/>

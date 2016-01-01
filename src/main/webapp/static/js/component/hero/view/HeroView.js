@@ -1,4 +1,4 @@
-castacencio.HeroView = Backbone.View.extend({
+Castacencio.View.HeroView = Backbone.View.extend({
 
 	initialize: function() {
 		this.render();
