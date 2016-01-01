@@ -1,4 +1,4 @@
-castacencio.NavView = Backbone.View.extend({
+Castacencio.View.NavView = Backbone.View.extend({
 
 	events: {
 		'click a': 'scrollToSection'

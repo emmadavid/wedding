@@ -1,4 +1,4 @@
-castacencio.OurStoryView = Backbone.View.extend({
+Castacencio.View.OurStoryView = Backbone.View.extend({
 
 	events: {
 		'click a': 'showStory',

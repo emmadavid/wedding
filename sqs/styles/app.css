@@ -403,3 +403,68 @@ nav {
     line-height: 53px;
     font-weight: 400;
     color: white; }
+
+#family-and-friends {
+  background-color: #ffffff; }
+  #family-and-friends h2 {
+    color: #000000;
+    font-weight: 200;
+    font-size: 17vw;
+    margin: 0;
+    text-align: center; }
+  #family-and-friends p {
+    color: #000000;
+    font-weight: 400;
+    margin: 0; }
+    #family-and-friends p:last-of-type {
+      margin-top: 2em; }
+  #family-and-friends .content {
+    padding: 0 17vw; }
+  #family-and-friends .hashtag {
+    color: #cd446d;
+    font-size: 3.25vw; }
+    #family-and-friends .hashtag span {
+      color: #ab1e51; }
+
+.instagram .next {
+  color: #000000; }
+
+.instagram-images {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 4em auto;
+  width: 90vw; }
+  .instagram-images::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.instagram-image {
+  float: left;
+  margin: 0 1vw 2vw 1vw;
+  height: 20vw;
+  width: 20vw;
+  max-height: 290px;
+  max-width: 290px;
+  overflow: hidden; }
+  .instagram-image a {
+    transition: transform .15s ease-in-out;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+    .instagram-image a:hover {
+      transform: scale(1.15); }
