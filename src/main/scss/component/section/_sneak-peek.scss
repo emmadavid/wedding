@@ -1,0 +1,39 @@
+// TODO: Clean up with settings/variables.
+#sneak-peek {
+	background-color: $white;
+	padding: 65px;
+
+	h2, h3, p {
+		color: $black;
+	}
+
+	h2, h3 {
+		font-weight: 200;
+	}
+
+	h2 {
+		font-size: 40px;
+	}
+
+	h3 {
+		font-size: 23px;
+	}
+
+	ul {
+		margin: 0 auto;
+		width: 1270px;
+	}
+
+	li {
+		float: left;
+		width: 380px;
+
+		&:nth-child( 2 ) {
+			margin: 0 65px;
+		}
+	}
+
+	img {
+		width: auto;
+	}
+}

@@ -426,6 +426,27 @@ nav {
     #family-and-friends .hashtag span {
       color: #ab1e51; }
 
+#sneak-peek {
+  background-color: #ffffff; }
+  #sneak-peek h2, #sneak-peek h3, #sneak-peek p {
+    color: #000000; }
+  #sneak-peek h2, #sneak-peek h3 {
+    font-weight: 200; }
+  #sneak-peek h2 {
+    font-size: 40px; }
+  #sneak-peek h3 {
+    font-size: 23px; }
+  #sneak-peek ul {
+    margin: 0 auto;
+    width: 1270px; }
+  #sneak-peek li {
+    float: left;
+    width: 380px; }
+    #sneak-peek li:nth-child(2) {
+      margin: 0 65px; }
+  #sneak-peek img {
+    width: auto; }
+
 .instagram .next {
   color: #000000; }
 
