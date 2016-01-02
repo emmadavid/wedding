@@ -1,0 +1,4 @@
+{.section collection}
+    {.section mainImage}
+<a href="#" style="height: 100vh;background: url('{assetUrl}?format=original') no-repeat center center scroll; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;display: block;width: 100vw;"></a>
+{.end}{.end}

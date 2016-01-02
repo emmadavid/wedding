@@ -427,7 +427,8 @@ nav {
       color: #ab1e51; }
 
 #sneak-peek {
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  padding: 65px; }
   #sneak-peek h2, #sneak-peek h3, #sneak-peek p {
     color: #000000; }
   #sneak-peek h2, #sneak-peek h3 {
@@ -446,6 +447,11 @@ nav {
       margin: 0 65px; }
   #sneak-peek img {
     width: auto; }
+
+#gift-registry {
+  min-height: 847px; }
+  #gift-registry a {
+    min-height: 847px; }
 
 .instagram .next {
   color: #000000; }
