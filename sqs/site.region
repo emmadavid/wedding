@@ -63,6 +63,11 @@
                 <a href="#" class="next">NEXT</a>
             </div>
         </section>
+        <section id="gift-registry">
+            <squarespace:query collection="gift-registry">
+                {@|apply gift-registry.block}
+            </squarespace:query>
+        </section>
         <section id="sneak-peek">
             <h2>Places, people and things.</h2>
             <p>Weddings are about the celebration between two crazy humans deciding to proclaim their sweet devotion to each other in front of their
