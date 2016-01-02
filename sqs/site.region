@@ -63,6 +63,18 @@
                 <a href="#" class="next">NEXT</a>
             </div>
         </section>
+        <section id="sneak-peek">
+            <h2>Places, people and things.</h2>
+            <p>Weddings are about the celebration between two crazy humans deciding to proclaim their sweet devotion to each other in front of their
+                dearest family and friends. And while we hope that on our wedding day you see and feel the love between us, there are these other places,
+                people, and things that will help us celebrate in our way. So here is a sneak peek of our wedding day. We wanted to hire vendors that had
+                a connection with us.</p>
+            <ul>
+                <squarespace:query collection="sneak-peek-gallery">
+                    {@|apply sneak-peek.block}
+                </squarespace:query>
+            </ul>
+        </section>
     </main>
     <footer id="footer" class="footer">
         <squarespace:block-field id="footerBlocks" columns="12"/>

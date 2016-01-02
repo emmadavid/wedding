@@ -1,0 +1,7 @@
+{.repeated section items}
+    <li>
+        <img {@|image-meta} />
+        <h3>{title}</h3>
+        {body}
+    </li>
+{.end}
