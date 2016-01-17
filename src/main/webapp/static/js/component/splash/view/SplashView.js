@@ -55,6 +55,12 @@ Castacencio.View.SplashView = Backbone.View.extend({
 			duration: this.defaultDuration,
 			complete: this.destroy
 		});
+
+		this.setCookie();
+	},
+
+	setCookie: function() {
+		Castacencio.Util.createCookie('skipAnimation', true, ( 1/24 ));
 	},
 
 	destroy: function() {

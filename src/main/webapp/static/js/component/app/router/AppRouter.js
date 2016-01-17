@@ -9,7 +9,14 @@ Castacencio.Router.AppRouter = Backbone.Router.extend({
 	},
 
 	loadModules: function() {
-		this._loadSplashComponent();
+		if (!Castacencio.Util.readCookie('skipAnimation')) {
+			this._loadSplashComponent();
+		} else {
+			$( '#splash' ).remove();
+			$( '#site' ).css('opacity', 1);
+			$( '#logo' ).show();
+		}
+
 		this._loadNavComponent();
 		this._loadHeroComponent();
 		this._loadOurStoryComponent();
