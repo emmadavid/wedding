@@ -1,13 +1,15 @@
-Castacencio.View.GalleryImageListView = Backbone.View.extend({
+Castacencio.View.GalleryItemListView = Backbone.View.extend({
 
 	tagName: 'ul',
-	className: 'gallery-images',
+	className: 'gallery',
 
 	initialize: function( options ) {
 		this.ladiesGallery = options.ladiesGallery;
 		this.gentsGallery = options.gentsGallery;
 		this.ladiesBio = options.ladiesBio;
 		this.gentsBio = options.gentsBio;
+
+		this.ladiesSection = options.ladiesSection;
 
 		this.render();
 	},
@@ -28,13 +30,14 @@ Castacencio.View.GalleryImageListView = Backbone.View.extend({
 			this.renderLadyItem( lady );
 		}, this);
 
-		this.$el.prependTo( this.ladiesGallery );
+		//this.$el.prependTo( this.ladiesGallery );
+		this.$el.appendTo( this.ladiesSection );
 
 		return this;
 	},
 
 	renderLadyItem: function ( model ) {
-		var item = new Castacencio.View.GalleryImageView({
+		var item = new Castacencio.View.GalleryItemView({
 			model: model,
 			bioSection: this.ladiesBio
 		});

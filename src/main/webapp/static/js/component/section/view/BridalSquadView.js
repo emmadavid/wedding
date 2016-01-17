@@ -9,12 +9,13 @@ Castacencio.View.BridalSquadView = Backbone.View.extend({
 		this.ladiesSection = this.$('.ladies-half');
 		this.gentsSection = this.$('.gents-half');
 
-		Castacencio.view.galleryImageListView = new Castacencio.View.GalleryImageListView({
+		Castacencio.view.galleryItemListView = new Castacencio.View.GalleryItemListView({
+			collection: Castacencio.collection.galleryItems,
+			ladiesSection: this.ladiesSection,
 			ladiesGallery: this.$( '.gallery, ladies-half' ),
-			gentsGallery: this.$( '.gallery, gents-half' ),
 			ladiesBio: $('.bio', '.gents-half'),
-			gentsBio: $('.bio', '.ladies-half'),
-			collection: Castacencio.collection.galleryImages
+			gentsGallery: this.$( '.gallery, gents-half' ),
+			gentsBio: $('.bio', '.ladies-half')
 		});
 
 		this.render();
@@ -26,12 +27,14 @@ Castacencio.View.BridalSquadView = Backbone.View.extend({
 
 	enableLadiesHalf: function(event) {
 		event.preventDefault();
+
 		this.ladiesSection.removeClass( 'inactive' ).addClass('active');
 		this.gentsSection.removeClass( 'active' ).addClass('inactive');
 	},
 
 	enableGentsHalf: function(event) {
 		event.preventDefault();
+
 		this.gentsSection.removeClass( 'inactive' ).addClass('active');
 		this.ladiesSection.removeClass( 'active' ).addClass('inactive');
 	},

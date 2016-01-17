@@ -1,6 +1,6 @@
 this["Castacencio"] = this["Castacencio"] || {};
 
-this["Castacencio"]["gallery-image-bio-template"] = function(data) {
+this["Castacencio"]["gallery-item-bio-template"] = function(data) {
 var __t, __p = '', __e = _.escape;
 __p += '<h3>' +
 ((__t = ( data.title )) == null ? '' : __t) +
@@ -12,7 +12,7 @@ __p += '<h3>' +
 return __p
 };
 
-this["Castacencio"]["gallery-image-template"] = function(data) {
+this["Castacencio"]["gallery-item-template"] = function(data) {
 var __t, __p = '', __e = _.escape;
 __p += '<a href="#">\n\t<div class="overlay">\n\t\t<h3>\n\t\t\t' +
 ((__t = ( data.title )) == null ? '' : __t) +

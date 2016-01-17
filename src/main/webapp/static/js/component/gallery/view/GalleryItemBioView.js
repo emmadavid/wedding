@@ -1,6 +1,6 @@
-Castacencio.View.GalleryImageBioView = Backbone.View.extend({
+Castacencio.View.GalleryItemBioView = Backbone.View.extend({
 
-	template: window[ 'Castacencio' ][ 'gallery-image-bio-template' ],
+	template: window[ 'Castacencio' ][ 'gallery-item-bio-template' ],
 
 	initialize: function() {},
 

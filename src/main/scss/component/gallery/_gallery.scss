@@ -1,35 +1,10 @@
-@mixin centerer {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
-
 .gallery {
-
-	margin-top: 100px;
-
-	ul {
-		@include clearfix;
-
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: center;
-		flex-flow: row wrap;
-	}
-
+	align-items: center;
 	display: none;
-
-	li {
-		float: left;
-		margin: 0 1vw 2vw 1vw;
-		height: 20vw;
-		width: 20vw;
-		max-height: 250px;
-		max-width: 250px;
-		overflow: hidden;
-	}
+	flex-direction: row;
+	flex-flow: row wrap;
+	justify-content: center;
+	margin-top: 100px;
 
 	a {
 		@include transition( border-color $base-duration $base-timing );
@@ -97,5 +72,5 @@
 }
 
 .active .gallery {
-	display: block;
+	display: flex;
 }

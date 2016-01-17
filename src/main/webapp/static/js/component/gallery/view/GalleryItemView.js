@@ -1,8 +1,8 @@
-Castacencio.View.GalleryImageView = Backbone.View.extend({
+Castacencio.View.GalleryItemView = Backbone.View.extend({
 
 	tagName: 'li',
-	className: 'gallery-image',
-	template: window[ 'Castacencio' ][ 'gallery-image-template' ],
+	className: 'gallery-item',
+	template: window[ 'Castacencio' ][ 'gallery-item-template' ],
 
 	events: {
 		'click a': 'renderBio'
@@ -22,7 +22,7 @@ Castacencio.View.GalleryImageView = Backbone.View.extend({
 	renderBio: function(event ) {
 		event.preventDefault();
 
-		var bio = new Castacencio.View.GalleryImageBioView({
+		var bio = new Castacencio.View.GalleryItemBioView({
 			model: this.model
 		});
 

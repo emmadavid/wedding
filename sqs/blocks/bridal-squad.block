@@ -3,8 +3,8 @@
         <div style="height: 100vh;background: url('{assetUrl}?format=original') no-repeat center center scroll; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;width: 100vw;">
         	<div class="ladies-half">
         		<h2><a href="#" class="ladies">The Ladies</a></h2>
-        		<div class="gallery"></div>
-				<div class="bio"></div>
+        		<!--<div class="gallery"></div>-->
+				<!--<div class="bio"></div>-->
         	</div>
         	<div class="gents-half">
         		<h2><a href="#" class="gents">The Gents</a></h2>

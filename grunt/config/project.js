@@ -49,11 +49,11 @@ module.exports = {
 			jsPath + '/component/instagram/view/InstagramImageListView.js',
 			jsPath + '/component/instagram/view/InstagramImageView.js',
 
-			jsPath + '/component/gallery/model/GalleryImage.js',
-			jsPath + '/component/gallery/collection/GalleryImages.js',
-			jsPath + '/component/gallery/view/GalleryImageListView.js',
-			jsPath + '/component/gallery/view/GalleryImageView.js',
-			jsPath + '/component/gallery/view/GalleryImageBioView.js',
+			jsPath + '/component/gallery/model/GalleryItem.js',
+			jsPath + '/component/gallery/collection/GalleryItems.js',
+			jsPath + '/component/gallery/view/GalleryItemListView.js',
+			jsPath + '/component/gallery/view/GalleryItemView.js',
+			jsPath + '/component/gallery/view/GalleryItemBioView.js',
 
 			jsPath + '/component/app/router/AppRouter.js'
 		],
