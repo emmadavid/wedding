@@ -1,13 +1,21 @@
 // TODO: Clean up with settings/variables. Repetitive code.
 #accommodations {
-	background-color: $white;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: scroll;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 
 	h2 {
+		background-color: $white;
 		border-bottom: 2px solid $brand-red;
 		color: $brand-red;
 		font-weight: 500;
 		line-height: .7;
-		margin-bottom: 10px;
+		margin: 0;
+		padding-top: 64px;
 		text-indent: em( 40px );
 	}
 
@@ -43,5 +51,11 @@
 		line-height: 53px;
 		font-weight: 400;
 		color: white;
+	}
+
+	&:after {
+		content: '';
+		display: block;
+		padding-top: percentage($section-image-accommodations-height / $section-image-accommodations-width);
 	}
 }

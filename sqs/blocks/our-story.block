@@ -1,16 +1,31 @@
-<h2>Our Story</h2>
-<div class="gallery-container">
-    {.repeated section items}
-        {.equal? urlId "emma"}
-            <a style="background: url({assetUrl}) no-repeat center center scroll; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;" id="story-emma" href="#"></a>
-        {.or}{.end}
-        {.equal? urlId "david"}
-            <a style="background: url({assetUrl}) no-repeat center center scroll; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;" id="story-david" href="#"></a>
-        {.or}{.end}
+{.section collection}
+    {.section mainImage}
+<section id="our-story" style="background-image: url('{assetUrl}?format=original');">
     {.end}
-</div>
-{.repeated section items}
-    {.equal? urlId "bg"}
-        <div style="height: 100vh;background: url({assetUrl}) no-repeat top center scroll; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;"></div>
-    {.or}{.end}
 {.end}
+
+    <div class="overlay">
+        <h3>We like to be behind the camera</h3>
+        <p>Bacon ipsum dolor amet pork shankle ut ea, tenderloin meatloaf dolor leberkas ad. Tongue landjaeger
+            pastrami sirloin andouille strip steak ad mollit deserunt qui est ut. Frankfurter adipisicing ut,
+            nostrud pariatur lorem andouille reprehenderit chicken corned beef brisket enim.</p>
+        <p>Aute meatloaf kevin, labore pork qui tongue laborum officia ground round shankle.</p>
+        <p>Pig chuck nulla, kielbasa ball tip sirloin aliquip pork loin picanha doner cillum tenderloin aute.
+            Hamburger chicken rump exercitation frankfurter, lorem beef enim in ut. Landjaeger meatloaf ullamco,
+            dolore short ribs sunt prosciutto chuck tongue ex pork loin minim bacon. Ham aliquip in aliqua
+            capicola mollit, id bresaola lorem tail ea alcatra ipsum bacon.
+            Consequat kevin dolore reprehenderit veniam eu pig aute sunt, short ribs nulla.</p>
+    </div>
+
+    <h2>Our Story</h2>
+    <div class="gallery-container">
+        {.repeated section items}
+            {.equal? urlId "emma"}
+                <a style="background: url({assetUrl}) no-repeat center center scroll; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;" id="story-emma" href="#"></a>
+            {.or}{.end}
+            {.equal? urlId "david"}
+                <a style="background: url({assetUrl}) no-repeat center center scroll; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;" id="story-david" href="#"></a>
+            {.or}{.end}
+        {.end}
+    </div>
+</section>
