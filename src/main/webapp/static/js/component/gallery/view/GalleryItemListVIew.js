@@ -25,18 +25,17 @@ Castacencio.View.GalleryItemListView = Backbone.View.extend({
 		}, this);
 
 		_.each( ladies, function( lady ) {
-			this.renderLadyItem( lady );
+			this.renderGalleryItem( lady, this.gentsSection );
 		}, this);
-
 		this.$el.appendTo( this.ladiesSection );
 
 		return this;
 	},
 
-	renderLadyItem: function ( model ) {
+	renderGalleryItem: function ( model, bioSection ) {
 		var item = new Castacencio.View.GalleryItemView({
 			model: model,
-			gentsSection: this.gentsSection
+			bioSection: bioSection
 		});
 
 		item.render().$el.appendTo( this.$el );

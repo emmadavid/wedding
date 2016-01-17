@@ -9,7 +9,7 @@ Castacencio.View.GalleryItemView = Backbone.View.extend({
 	},
 
 	initialize: function( options ) {
-		this.gentsSection = options.gentsSection;
+		this.bioSection = options.bioSection;
 	},
 
 	render: function() {
@@ -28,7 +28,7 @@ Castacencio.View.GalleryItemView = Backbone.View.extend({
 			model: this.model
 		});
 
-		bio.render().$el.appendTo( this.gentsSection );
+		bio.render().$el.appendTo( this.bioSection );
 	}
 
 });
