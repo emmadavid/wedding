@@ -44,11 +44,6 @@
                 {@|apply our-story.block}
             </squarespace:query>
         </section>
-        <section id="accommodations">
-            <squarespace:query collection="accommodations-gallery">
-                {@|apply accommodations.block}
-            </squarespace:query>
-        </section>
         <section id="family-and-friends">
             <div class="content">
                 <h2>05 29 16</h2>
@@ -62,6 +57,19 @@
             <div class="instagram">
                 <a href="#" class="next">NEXT</a>
             </div>
+        </section>
+        <section id="bridal-squad">
+            <squarespace:query collection="bridal-squad-gallery">
+                {@|apply bridal-squad-gallery.block}
+            </squarespace:query>
+            <squarespace:query collection="bridal-squad">
+                {@|apply bridal-squad.block}
+            </squarespace:query>
+        </section>
+        <section id="accommodations">
+            <squarespace:query collection="accommodations-gallery">
+                {@|apply accommodations.block}
+            </squarespace:query>
         </section>
         <section id="gift-registry">
             <squarespace:query collection="gift-registry">
@@ -90,4 +98,4 @@
 <squarespace:script src="app.js" combo="{.if authenticatedAccount}false{.or}true{.end}"/>
 {squarespace-footers}
 </body>
-</html> 
+</html>

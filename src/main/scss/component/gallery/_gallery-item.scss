@@ -1,0 +1,27 @@
+.gallery-item {
+	float: left;
+	height: 20vw;
+	margin: 0 1vw 2vw 1vw;
+	max-height: 250px;
+	max-width: 250px;
+	overflow: hidden;
+	width: 20vw;
+
+	a {
+		@include transition( border-color $base-duration $base-timing );
+		border: em( 17.5px ) solid rgba( 255,255,255,0.65 );
+		display: inline-block;
+		height: 100%;
+		overflow: hidden;
+		position: relative;
+		width: 100%;
+
+		&:hover {
+			border-color: rgba( 255, 255, 255, 0.9 );
+
+			img {
+				transform: scale( 0.9 );
+			}
+		}
+	}
+}

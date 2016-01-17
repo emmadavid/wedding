@@ -11,7 +11,9 @@ module.exports = {
 			options: {
 				"compilation_level": "SIMPLE_OPTIMIZATIONS",
 				"max_processes": 5,
-				"banner": "/* hello world! */"
+				"banner": "/* hello world! */",
+				"jscomp_off": "uselessCode",
+				"warning_level": "QUIET"
 			}
 		}
 	}

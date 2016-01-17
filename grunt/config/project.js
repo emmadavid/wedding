@@ -42,11 +42,18 @@ module.exports = {
 
 			jsPath + '/component/section/view/OurStoryView.js',
 			jsPath + '/component/section/view/FriendsFamilyView.js',
+			jsPath + '/component/section/view/BridalSquadView.js',
 
 			jsPath + '/component/instagram/model/InstagramImage.js',
 			jsPath + '/component/instagram/collection/InstagramImages.js',
 			jsPath + '/component/instagram/view/InstagramImageListView.js',
 			jsPath + '/component/instagram/view/InstagramImageView.js',
+
+			jsPath + '/component/gallery/model/GalleryItem.js',
+			jsPath + '/component/gallery/collection/GalleryItems.js',
+			jsPath + '/component/gallery/view/GalleryItemListView.js',
+			jsPath + '/component/gallery/view/GalleryItemView.js',
+			jsPath + '/component/gallery/view/GalleryItemBioView.js',
 
 			jsPath + '/component/app/router/AppRouter.js'
 		],

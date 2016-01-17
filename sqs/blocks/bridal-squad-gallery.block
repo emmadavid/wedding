@@ -1,0 +1,4 @@
+<script type="text/javascript">
+	var json = {@|json-pretty};
+	window.gallery = json.items;
+</script>

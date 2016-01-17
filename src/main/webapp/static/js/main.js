@@ -15,12 +15,14 @@ Castacencio.router = {};
 
 // Settings
 Castacencio.settings = {
-	accessToken: '2782011.467ede5.e13594c3c9884b8386986d5657388691'
+	accessToken: '2782011.467ede5.e13594c3c9884b8386986d5657388691',
+	gallery: window.gallery
 };
 
 $( function() {
 	// Kick off app initialization.
 	Castacencio.router.appRouter = new Castacencio.Router.AppRouter();
+	Backbone.pubSub = _.extend( {}, Backbone.Events );
 	Backbone.history.start();
 });
 

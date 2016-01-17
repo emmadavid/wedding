@@ -1,0 +1,12 @@
+.gallery {
+	align-items: center;
+	display: none;
+	flex-direction: row;
+	flex-flow: row wrap;
+	justify-content: center;
+	margin-top: 100px;
+}
+
+.active .gallery {
+	display: flex;
+}
