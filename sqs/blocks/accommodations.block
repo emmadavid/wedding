@@ -2,8 +2,8 @@
     {.section mainImage}
 <section id="accommodations" style="background-image: url('{assetUrl}?format=original');">
     {.end}
+    <h2>{title}</h2>
 {.end}
-    <h2>Accommodations</h2>
     <div class="content">
         {.repeated section items}
             <h3>{title}</h3>
