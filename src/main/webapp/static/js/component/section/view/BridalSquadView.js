@@ -13,9 +13,8 @@ Castacencio.View.BridalSquadView = Backbone.View.extend({
 			collection: Castacencio.collection.galleryItems,
 			ladiesSection: this.ladiesSection,
 			ladiesGallery: this.$( '.gallery, ladies-half' ),
-			ladiesBio: $('.bio', '.gents-half'),
-			gentsGallery: this.$( '.gallery, gents-half' ),
-			gentsBio: $('.bio', '.ladies-half')
+			gentsSection: this.gentsSection,
+			gentsGallery: this.$( '.gallery, gents-half' )
 		});
 
 		this.render();

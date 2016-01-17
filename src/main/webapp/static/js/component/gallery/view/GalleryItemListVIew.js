@@ -4,12 +4,10 @@ Castacencio.View.GalleryItemListView = Backbone.View.extend({
 	className: 'gallery',
 
 	initialize: function( options ) {
-		this.ladiesGallery = options.ladiesGallery;
-		this.gentsGallery = options.gentsGallery;
-		this.ladiesBio = options.ladiesBio;
-		this.gentsBio = options.gentsBio;
-
 		this.ladiesSection = options.ladiesSection;
+		this.ladiesGallery = options.ladiesGallery;
+		this.gentsSection = options.gentsSection;
+		this.gentsGallery = options.gentsGallery;
 
 		this.render();
 	},
@@ -30,7 +28,6 @@ Castacencio.View.GalleryItemListView = Backbone.View.extend({
 			this.renderLadyItem( lady );
 		}, this);
 
-		//this.$el.prependTo( this.ladiesGallery );
 		this.$el.appendTo( this.ladiesSection );
 
 		return this;
@@ -39,7 +36,7 @@ Castacencio.View.GalleryItemListView = Backbone.View.extend({
 	renderLadyItem: function ( model ) {
 		var item = new Castacencio.View.GalleryItemView({
 			model: model,
-			bioSection: this.ladiesBio
+			gentsSection: this.gentsSection
 		});
 
 		item.render().$el.appendTo( this.$el );
