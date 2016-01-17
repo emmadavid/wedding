@@ -1,8 +1,8 @@
 Castacencio.View.BridalSquadView = Backbone.View.extend({
 
 	events: {
-		'click .ladies-half': 'enableLadiesHalf',
-		'click .gents-half': 'enableGentsHalf'
+		'click a.ladies': 'enableLadiesHalf',
+		'click a.gents': 'enableGentsHalf'
 	},
 
 	initialize: function() {
@@ -42,6 +42,7 @@ Castacencio.View.BridalSquadView = Backbone.View.extend({
 	enableLadiesHalf: function(event) {
 		event.preventDefault();
 
+		Backbone.pubSub.trigger( 'DESTROY_BIO', {} );
 		this.ladiesSection.removeClass( 'inactive' ).addClass('active');
 		this.gentsSection.removeClass( 'active' ).addClass('inactive');
 	},
@@ -49,6 +50,7 @@ Castacencio.View.BridalSquadView = Backbone.View.extend({
 	enableGentsHalf: function(event) {
 		event.preventDefault();
 
+		Backbone.pubSub.trigger( 'DESTROY_BIO', {} );
 		this.gentsSection.removeClass( 'inactive' ).addClass('active');
 		this.ladiesSection.removeClass( 'active' ).addClass('inactive');
 	},
