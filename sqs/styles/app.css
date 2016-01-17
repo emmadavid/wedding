@@ -466,9 +466,13 @@ nav {
     min-height: 847px; }
 
 #bridal-squad {
-  min-height: 1024px; }
-  #bridal-squad div {
-    min-height: 1024px; }
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
   #bridal-squad h2 {
     margin: 0;
     line-height: .85em;
@@ -538,6 +542,10 @@ nav {
     #bridal-squad .bio img {
       width: 250px;
       height: 250px; }
+  #bridal-squad:after {
+    content: '';
+    display: block;
+    padding-top: 71.1111111111%; }
 
 .instagram .next {
   color: #000000; }

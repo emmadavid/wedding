@@ -46,14 +46,11 @@
                 <a href="#" class="next">NEXT</a>
             </div>
         </section>
-        <section id="bridal-squad">
-            <squarespace:query collection="bridal-squad-gallery">
-                {@|apply bridal-squad-gallery.block}
-            </squarespace:query>
-            <squarespace:query collection="bridal-squad">
-                {@|apply bridal-squad.block}
-            </squarespace:query>
-        </section>
+
+        <squarespace:query collection="bridal-squad-gallery">
+            {@|apply bridal-squad.block}
+        </squarespace:query>
+
         <section id="accommodations">
             <squarespace:query collection="accommodations-gallery">
                 {@|apply accommodations.block}
