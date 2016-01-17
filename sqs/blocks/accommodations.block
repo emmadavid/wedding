@@ -2,12 +2,13 @@
     {.section mainImage}
 <section id="accommodations" style="background-image: url('{assetUrl}?format=original');">
     {.end}
+    <h2>{title}</h2>
 {.end}
-    <h2>Accommodations</h2>
     <div class="content">
-        <h3>W Chicago - City Center</h3>
-        <p>172 West Adams Street<br/>Chicago, Illinois 60603</p>
-        <p>Please reference the Castaneda-Villavicencio wedding to receive a reduced booking rate.</p>
-        <a href="https://www.starwoodmeeting.com/events/start.action?id=1508312034&key=36C1F07E" class="button" target="_blank">visit website</a>
+        {.repeated section items}
+            <h3>{title}</h3>
+            {body}
+            <a href="{clickthroughUrl}" class="button" target="_blank">visit website</a>
+        {.end}
     </div>
 </section>

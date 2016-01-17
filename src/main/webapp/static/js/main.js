@@ -26,7 +26,6 @@ $( function() {
 	Backbone.pubSub = _.extend( {}, Backbone.Events );
 
 	Castacencio.Util.createCookie = function(name,value,days) {
-		console.log('creating');
 		if (days) {
 			var date = new Date();
 			date.setTime(date.getTime()+(days*24*60*60*1000));
