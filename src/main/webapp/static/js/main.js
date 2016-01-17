@@ -22,6 +22,7 @@ Castacencio.settings = {
 $( function() {
 	// Kick off app initialization.
 	Castacencio.router.appRouter = new Castacencio.Router.AppRouter();
+	Backbone.pubSub = _.extend({}, Backbone.Events);
 	Backbone.history.start();
 });
 

@@ -22,6 +22,8 @@ Castacencio.View.GalleryItemView = Backbone.View.extend({
 	renderBio: function(event ) {
 		event.preventDefault();
 
+		Backbone.pubSub.trigger( 'DESTROY_BIO', {} );
+
 		var bio = new Castacencio.View.GalleryItemBioView({
 			model: this.model
 		});

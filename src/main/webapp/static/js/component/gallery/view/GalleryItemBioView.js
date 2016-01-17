@@ -7,7 +7,9 @@ Castacencio.View.GalleryItemBioView = Backbone.View.extend({
 		'click': 'destroy'
 	},
 
-	initialize: function() {},
+	initialize: function() {
+		Backbone.pubSub.on( 'DESTROY_BIO', this.destroy, this );
+	},
 
 	render: function() {
 		var markup = this.template( this.model.toJSON() );
