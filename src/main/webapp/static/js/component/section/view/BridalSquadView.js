@@ -9,18 +9,33 @@ Castacencio.View.BridalSquadView = Backbone.View.extend({
 		this.ladiesSection = this.$('.ladies-half');
 		this.gentsSection = this.$('.gents-half');
 
-		Castacencio.view.galleryItemListView = new Castacencio.View.GalleryItemListView({
-			collection: Castacencio.collection.galleryItems,
-			ladiesSection: this.ladiesSection,
-			ladiesGallery: this.$( '.gallery, ladies-half' ),
-			gentsSection: this.gentsSection,
-			gentsGallery: this.$( '.gallery, gents-half' )
-		});
-
 		this.render();
 	},
 
 	render: function() {
+		var ladies = [];
+		var gents = [];
+
+		_.each( Castacencio.collection.galleryItems.models, function( item ) {
+			if ( _.contains( item.get( 'tags' ), 'ladies' ) ) {
+				ladies.push( item );
+			} else if ( _.contains( item.get( 'tags' ), 'gents' ) ) {
+				gents.push( item );
+			}
+		}, this);
+
+		Castacencio.view.ladiesGalleryItemListView = new Castacencio.View.GalleryItemListView({
+			collection: ladies,
+			bioSection: this.gentsSection,
+			gallerySection: this.ladiesSection
+		});
+
+		Castacencio.view.gentsGalleryItemListView = new Castacencio.View.GalleryItemListView({
+			collection: gents,
+			bioSection: this.ladiesSection,
+			gallerySection: this.gentsSection
+		});
+
 		return this;
 	},
 
