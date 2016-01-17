@@ -473,9 +473,24 @@ nav {
     width: auto; }
 
 #gift-registry {
-  min-height: 847px; }
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
   #gift-registry a {
-    min-height: 847px; }
+    display: inline-block;
+    position: absolute;
+    width: 16%;
+    height: 13%;
+    top: 56%;
+    left: 42%; }
+  #gift-registry:after {
+    content: '';
+    display: block;
+    padding-top: 58.8194444444%; }
 
 #bridal-squad {
   background-repeat: no-repeat;

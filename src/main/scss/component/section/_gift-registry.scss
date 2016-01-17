@@ -1,8 +1,24 @@
-// TODO: Clean up with settings/variables.
 #gift-registry {
-	min-height: 847px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: scroll;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 
 	a {
-		min-height: 847px;
+		display: inline-block;
+		position: absolute;
+		width: 16%;
+		height: 13%;
+		top: 56%;
+		left: 42%;
+	}
+
+	&:after {
+		content: '';
+		display: block;
+		padding-top: percentage($section-image-gift-registry-height / $section-image-gift-registry-width);
 	}
 }
