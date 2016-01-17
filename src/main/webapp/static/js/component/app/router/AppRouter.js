@@ -14,6 +14,7 @@ Castacencio.Router.AppRouter = Backbone.Router.extend({
 		this._loadHeroComponent();
 		this._loadOurStoryComponent();
 		this._loadFamilyFriendsComponent();
+		this._loadBridalSquadComponent();
 	},
 
 	_loadSplashComponent: function() {
@@ -45,6 +46,12 @@ Castacencio.Router.AppRouter = Backbone.Router.extend({
 	_loadFamilyFriendsComponent: function() {
 		Castacencio.view.familyFriendsView = new Castacencio.View.FriendsFamilyView({
 			el: $( '#family-and-friends' )
+		});
+	},
+
+	_loadBridalSquadComponent: function() {
+		Castacencio.view.bridalSquadView = new Castacencio.View.BridalSquadView({
+			el: $( '#bridal-squad' )
 		});
 	}
 

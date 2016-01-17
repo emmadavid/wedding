@@ -15,7 +15,8 @@ Castacencio.router = {};
 
 // Settings
 Castacencio.settings = {
-	accessToken: '2782011.467ede5.e13594c3c9884b8386986d5657388691'
+	accessToken: '2782011.467ede5.e13594c3c9884b8386986d5657388691',
+	gallery: window.gallery
 };
 
 $( function() {

@@ -453,6 +453,81 @@ nav {
   #gift-registry a {
     min-height: 847px; }
 
+#bridal-squad {
+  min-height: 1024px; }
+  #bridal-squad div {
+    min-height: 1024px; }
+  #bridal-squad h2 {
+    margin: 0;
+    line-height: .85em;
+    letter-spacing: .015em;
+    padding-top: 200px;
+    text-align: center; }
+  #bridal-squad .ladies-half,
+  #bridal-squad .gents-half {
+    -webkit-transition: background-color 150ms ease;
+    -moz-transition: background-color 150ms ease;
+    transition: background-color 150ms ease;
+    position: absolute;
+    width: 50%;
+    height: 100%; }
+    #bridal-squad .ladies-half h2 a,
+    #bridal-squad .gents-half h2 a {
+      display: inline-block;
+      padding: 0 1em;
+      position: relative;
+      visibility: visible;
+      opacity: 1; }
+      #bridal-squad .ladies-half h2 a:before,
+      #bridal-squad .gents-half h2 a:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        bottom: 0;
+        left: 0;
+        background-color: #000;
+        visibility: hidden;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transition: all 0.3s ease-in-out 0s;
+        transition: all 0.3s ease-in-out 0s; }
+    #bridal-squad .ladies-half.inactive,
+    #bridal-squad .gents-half.inactive {
+      background-color: rgba(32, 23, 19, 0.7); }
+      #bridal-squad .ladies-half.inactive h2,
+      #bridal-squad .gents-half.inactive h2 {
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.5s linear; }
+    #bridal-squad .ladies-half.active h2 a:before, #bridal-squad .ladies-half:hover h2 a:before,
+    #bridal-squad .gents-half.active h2 a:before,
+    #bridal-squad .gents-half:hover h2 a:before {
+      visibility: visible;
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1); }
+  #bridal-squad .ladies-half {
+    left: 0; }
+    #bridal-squad .ladies-half h2 a {
+      color: #D7AE1D;
+      float: right; }
+      #bridal-squad .ladies-half h2 a:before {
+        background-color: #D7AE1D; }
+  #bridal-squad .gents-half {
+    right: 0; }
+    #bridal-squad .gents-half h2 a {
+      color: #ffffff;
+      float: left; }
+      #bridal-squad .gents-half h2 a:before {
+        background-color: #ffffff; }
+  #bridal-squad .bio {
+    display: none;
+    margin: 0 auto;
+    width: 65%; }
+    #bridal-squad .bio img {
+      width: 250px;
+      height: 250px; }
+
 .instagram .next {
   color: #000000; }
 
@@ -495,3 +570,81 @@ nav {
     background-size: cover; }
     .instagram-image a:hover {
       transform: scale(1.15); }
+
+.gallery {
+  margin-top: 100px;
+  display: none; }
+  .gallery ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap; }
+    .gallery ul::after {
+      clear: both;
+      content: "";
+      display: table; }
+  .gallery li {
+    float: left;
+    margin: 0 1vw 2vw 1vw;
+    height: 20vw;
+    width: 20vw;
+    max-height: 250px;
+    max-width: 250px;
+    overflow: hidden; }
+  .gallery a {
+    -webkit-transition: border-color 150ms ease;
+    -moz-transition: border-color 150ms ease;
+    transition: border-color 150ms ease;
+    border: 1.09375em solid rgba(255, 255, 255, 0.65);
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    height: 100%;
+    width: 100%; }
+    .gallery a:hover {
+      border-color: rgba(255, 255, 255, 0.9); }
+      .gallery a:hover .overlay {
+        opacity: 1; }
+      .gallery a:hover img {
+        transform: scale(0.9); }
+    .gallery a .overlay {
+      -webkit-transition: opacity 300ms ease;
+      -moz-transition: opacity 300ms ease;
+      transition: opacity 300ms ease;
+      background-color: rgba(15, 15, 15, 0.6);
+      opacity: 0;
+      z-index: 1;
+      min-height: auto !important;
+      width: 100%;
+      height: 100%;
+      position: absolute; }
+      .gallery a .overlay h3 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        margin: 0;
+        text-transform: none;
+        font-weight: bold;
+        font-size: 30px;
+        text-shadow: black 0px 0px 20px; }
+        .gallery a .overlay h3 p {
+          font-weight: 400;
+          font-size: 14px;
+          white-space: nowrap;
+          margin: 0;
+          text-shadow: black 0px 0px 20px; }
+  .gallery img {
+    -webkit-transition: all 150ms ease;
+    -moz-transition: all 150ms ease;
+    transition: all 150ms ease;
+    height: 260px;
+    width: 260px;
+    max-width: none;
+    margin: -30px 0px 0px -30px;
+    transform: scale(1); }
+
+.active .gallery {
+  display: block; }

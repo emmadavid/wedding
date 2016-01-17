@@ -1,11 +1,11 @@
 <nav data-content-field="navigation-site-nav">
-    <ul>
-        {.repeated section items}
-        <li class="{.section active}active{.end}">
-            {.section collection}
-            <a href="#{urlId}">{navigationTitle}</a>
-            {.end}
-        </li>
-        {.end}
-    </ul>
+	<ul>
+		{.repeated section items}
+			<li class="{.section active}active{.end}">
+				{.section collection}
+					<a href="#{urlId}">{navigationTitle}</a>
+				{.end}
+			</li>
+		{.end}
+	</ul>
 </nav>
