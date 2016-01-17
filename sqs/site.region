@@ -51,11 +51,10 @@
             {@|apply bridal-squad.block}
         </squarespace:query>
 
-        <section id="accommodations">
-            <squarespace:query collection="accommodations-gallery">
-                {@|apply accommodations.block}
-            </squarespace:query>
-        </section>
+        <squarespace:query collection="accommodations-gallery">
+            {@|apply accommodations.block}
+        </squarespace:query>
+
         <section id="gift-registry">
             <squarespace:query collection="gift-registry">
                 {@|apply gift-registry.block}

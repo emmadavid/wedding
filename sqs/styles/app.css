@@ -383,13 +383,21 @@ nav {
     padding-top: 55.5170020819%; }
 
 #accommodations {
-  background-color: #ffffff; }
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
   #accommodations h2 {
+    background-color: #ffffff;
     border-bottom: 2px solid #dd2f37;
     color: #dd2f37;
     font-weight: 500;
     line-height: .7;
-    margin-bottom: 10px;
+    margin: 0;
+    padding-top: 64px;
     text-indent: 2.5em; }
   #accommodations h3 {
     font-size: 1.75em;
@@ -415,6 +423,10 @@ nav {
     line-height: 53px;
     font-weight: 400;
     color: white; }
+  #accommodations:after {
+    content: '';
+    display: block;
+    padding-top: 55.5170020819%; }
 
 #family-and-friends {
   background-color: #ffffff; }
