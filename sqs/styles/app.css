@@ -130,6 +130,9 @@ header {
     display: block; }
 
 nav {
+  -webkit-transition: padding 300ms ease;
+  -moz-transition: padding 300ms ease;
+  transition: padding 300ms ease;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -160,6 +163,9 @@ nav {
     justify-content: center;
     -ms-flex-pack: center; }
   nav li {
+    -webkit-transition: margin 300ms ease;
+    -moz-transition: margin 300ms ease;
+    transition: margin 300ms ease;
     list-style-type: none;
     margin-left: 2.1875em; }
     nav li:first-child {
@@ -168,12 +174,23 @@ nav {
       margin-right: 7.1875em; }
     nav li:nth-child(4) {
       margin-left: 7.1875em; }
+    nav li.active a {
+      color: #ffffff;
+      font-weight: bold; }
   nav a {
     font-size: 0.75em;
     letter-spacing: 0.125em;
     text-transform: uppercase; }
-    nav a.active {
-      color: #ffffff; }
+  nav.float {
+    background-color: #1c1513;
+    padding: 10px 0;
+    margin-top: 20px !important; }
+    nav.float a {
+      font-weight: 500; }
+    nav.float li:nth-child(3) {
+      margin-right: 0; }
+    nav.float li:nth-child(4) {
+      margin-left: 2.1875em; }
 
 #splash {
   position: absolute;

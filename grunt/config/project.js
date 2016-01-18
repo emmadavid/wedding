@@ -28,6 +28,7 @@ module.exports = {
 			jsPath + '/vendor/slick.min.js',
 			jsPath + '/vendor/velocity.min.js',
 			jsPath + '/vendor/velocity.ui.js',
+			jsPath + '/vendor/scrollmagic.min.js',
 			jsPath + '/vendor/underscore-min.js',
 			jsPath + '/vendor/backbone-min.js',
 
@@ -54,6 +55,8 @@ module.exports = {
 			jsPath + '/component/gallery/view/GalleryItemListView.js',
 			jsPath + '/component/gallery/view/GalleryItemView.js',
 			jsPath + '/component/gallery/view/GalleryItemBioView.js',
+
+			jsPath + '/component/app/view/ScrollControllerView.js',
 
 			jsPath + '/component/app/router/AppRouter.js'
 		],
