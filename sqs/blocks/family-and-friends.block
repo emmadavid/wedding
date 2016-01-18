@@ -1,0 +1,8 @@
+<section id="family-and-friends">
+    <div class="content">
+        {mainContent}?format=main-content
+    </div>
+    <div class="instagram">
+        <a href="#" class="next">NEXT</a>
+    </div>
+</section>
