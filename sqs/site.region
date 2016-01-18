@@ -20,13 +20,10 @@
         {.end}
         <squarespace:navigation navigationId="site-nav" template="navigation"/>
     </header>
-    <!--Content injection point.-->
     <main id="page" class="content" role="main">
-        <section id="hero">
-            <squarespace:query collection="hero">
-                {@|apply hero.block}
-            </squarespace:query>
-        </section>
+        <squarespace:query collection="hero">
+            {@|apply hero.block}
+        </squarespace:query>
 
         <squarespace:query collection="our-story-gallery">
             {@|apply our-story.block}
