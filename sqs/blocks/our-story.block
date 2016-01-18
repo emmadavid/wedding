@@ -3,20 +3,6 @@
 <section id="our-story" style="background-image: url('{assetUrl}?format=original');">
     {.end}
 {.end}
-
-    <div class="overlay">
-        <h3>We like to be behind the camera</h3>
-        <p>Bacon ipsum dolor amet pork shankle ut ea, tenderloin meatloaf dolor leberkas ad. Tongue landjaeger
-            pastrami sirloin andouille strip steak ad mollit deserunt qui est ut. Frankfurter adipisicing ut,
-            nostrud pariatur lorem andouille reprehenderit chicken corned beef brisket enim.</p>
-        <p>Aute meatloaf kevin, labore pork qui tongue laborum officia ground round shankle.</p>
-        <p>Pig chuck nulla, kielbasa ball tip sirloin aliquip pork loin picanha doner cillum tenderloin aute.
-            Hamburger chicken rump exercitation frankfurter, lorem beef enim in ut. Landjaeger meatloaf ullamco,
-            dolore short ribs sunt prosciutto chuck tongue ex pork loin minim bacon. Ham aliquip in aliqua
-            capicola mollit, id bresaola lorem tail ea alcatra ipsum bacon.
-            Consequat kevin dolore reprehenderit veniam eu pig aute sunt, short ribs nulla.</p>
-    </div>
-
     <h2>Our Story</h2>
     <div class="gallery-container">
         {.repeated section items}
@@ -28,4 +14,19 @@
             {.or}{.end}
         {.end}
     </div>
+
+    {.repeated section items}
+        {.equal? urlId "emma"}
+            <div class="overlay emma">
+                <h3>{title}</h3>
+                {body}
+            </div>
+        {.or}{.end}
+        {.equal? urlId "david"}
+            <div class="overlay david">
+                <h3>{title}</h3>
+                {body}
+            </div>
+        {.or}{.end}
+    {.end}
 </section>
