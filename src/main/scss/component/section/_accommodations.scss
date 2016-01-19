@@ -41,18 +41,6 @@
 		width: em( 400px );
 	}
 
-	.button {
-		background-color: #c73f42;
-		border-radius: 8px;
-		width: 200px;
-		height: 55px;
-		display: inline-block;
-		text-align: center;
-		line-height: 53px;
-		font-weight: 400;
-		color: white;
-	}
-
 	&:after {
 		content: '';
 		display: block;

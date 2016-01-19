@@ -103,6 +103,20 @@ header {
   width: 100%;
   z-index: 1; }
 
+.button {
+  transition: all .15s ease-in-out;
+  background-color: #c73f42;
+  border-radius: 8px;
+  width: 200px;
+  height: 55px;
+  display: inline-block;
+  text-align: center;
+  line-height: 53px;
+  font-weight: 400;
+  color: white; }
+  .button:hover {
+    background-color: #a33032; }
+
 #logo {
   overflow: hidden;
   text-indent: 101%;
@@ -430,16 +444,6 @@ nav {
     position: absolute;
     margin: 100px;
     width: 25em; }
-  #accommodations .button {
-    background-color: #c73f42;
-    border-radius: 8px;
-    width: 200px;
-    height: 55px;
-    display: inline-block;
-    text-align: center;
-    line-height: 53px;
-    font-weight: 400;
-    color: white; }
   #accommodations:after {
     content: '';
     display: block;
@@ -591,8 +595,10 @@ nav {
     display: block;
     padding-top: 71.1111111111%; }
 
-.instagram .next {
-  color: #000000; }
+.instagram {
+  text-align: center; }
+  .instagram .next {
+    margin-bottom: 2vw; }
 
 .instagram-images {
   display: -webkit-flex;
@@ -604,7 +610,7 @@ nav {
   -webkit-justify-content: center;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 4em auto;
+  margin: 4em auto 0 auto;
   width: 90vw; }
   .instagram-images::after {
     clear: both;

@@ -3,6 +3,6 @@
         {mainContent}?format=main-content
     </div>
     <div class="instagram">
-        <a href="#" class="next">NEXT</a>
+        <a href="#" class="next button">load more</a>
     </div>
 </section>
