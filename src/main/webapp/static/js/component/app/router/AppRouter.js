@@ -2,20 +2,30 @@ Castacencio.Router.AppRouter = Backbone.Router.extend({
 
 	// TODO: usescrollspy to load individually.
 	routes: {
-		'': 'loadModules'
+		'': 'render'
 	},
 
 	initialize: function() {
+		this.splash = $('#splash');
+		this.site = $('#site');
+		this.logo = $('#logo');
+	},
+
+	render: function () {
+		if (!Castacencio.Util.readCookie('skipAnimation')) {
+			this.site.hide();
+			this._loadSplashComponent();
+			Backbone.pubSub.on('SPLASH_ANIMATION_END', this.loadModules, this);
+		} else {
+			this.splash.remove();
+			this.site.css('opacity', 1);
+			this.logo.show();
+			this.loadModules();
+		}
 	},
 
 	loadModules: function() {
-		if (!Castacencio.Util.readCookie('skipAnimation')) {
-			this._loadSplashComponent();
-		} else {
-			$( '#splash' ).remove();
-			$( '#site' ).css('opacity', 1);
-			$( '#logo' ).show();
-		}
+		this.site.show();
 
 		this._loadNavComponent();
 		this._loadHeroComponent();
@@ -27,9 +37,9 @@ Castacencio.Router.AppRouter = Backbone.Router.extend({
 
 	_loadSplashComponent: function() {
 		Castacencio.view.splashView = new Castacencio.View.SplashView({
-			el: $( '#splash' ),
-			site: $( '#site' ),
-			logo: $( '#logo' )
+			el: this.splash,
+			site: this.site,
+			logo: this.logo
 		});
 	},
 
@@ -64,9 +74,7 @@ Castacencio.Router.AppRouter = Backbone.Router.extend({
 	},
 
 	_loadScrollControllerView: function() {
-		Castacencio.view.scrollControllerView = new Castacencio.View.ScrollControllerView({
-
-		});
+		Castacencio.view.scrollControllerView = new Castacencio.View.ScrollControllerView({});
 	}
 
 });

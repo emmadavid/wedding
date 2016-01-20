@@ -7,8 +7,8 @@ Castacencio.View.SplashView = Backbone.View.extend({
 
 		this.site = options.site;
 		this.logo = options.logo;
-		this.flower = this.$( '#splash-layer-petals, #splash-layer-flowers' );
-		this.monogram = this.$( '#splash-layer-monogram' );
+		this.flower = this.$('#splash-layer-petals, #splash-layer-flowers');
+		this.monogram = this.$('#splash-layer-monogram');
 
 		this.render();
 	},
@@ -20,14 +20,14 @@ Castacencio.View.SplashView = Backbone.View.extend({
 	},
 
 	slideUpSplashImage: function() {
-		this.$el.velocity( 'transition.slideUpIn', {
+		this.$el.velocity('transition.slideUpIn', {
 			duration: this.defaultDuration,
 			complete: this.fadeOutSplashImage
 		});
 	},
 
 	fadeOutSplashImage: function() {
-		this.flower.delay( this.defaultDuration * 1.85 ).velocity({
+		this.flower.delay(this.defaultDuration * 1.85).velocity({
 			opacity: 0
 		}, {
 			duration: this.defaultDuration,
@@ -49,6 +49,7 @@ Castacencio.View.SplashView = Backbone.View.extend({
 	},
 
 	fadeInSite: function() {
+		Backbone.pubSub.trigger('SPLASH_ANIMATION_END', {});
 		this.site.velocity({
 			opacity: 1
 		},{
