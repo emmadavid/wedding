@@ -1,16 +1,20 @@
 .button {
-	transition: all .15s ease-in-out;
-	background-color: #c73f42;
-	border-radius: 8px;
-	width: 200px;
-	height: 55px;
+	background-color: $button-color-default;
+	border-radius: $button-radius;
+	color: $white;
 	display: inline-block;
+	font-weight: $button-font-weight;
+	height: $button-height;
+	line-height: $button-height;
 	text-align: center;
-	line-height: 53px;
-	font-weight: 400;
-	color: white;
+	transition: background-color $base-duration $base-timing;
+	width: $button-width;
 
 	&:hover {
-		background-color: darken(#c73f42,10%);
+		background-color: $button-color-hover;
+	}
+
+	&:active {
+		background-color: $button-color-active;
 	}
 }

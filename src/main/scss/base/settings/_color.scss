@@ -11,3 +11,9 @@ $brand-red: #dd2f37;
 // Hero
 // ------------------------------
 $hero-arrow-color: $white;
+
+// Button
+// ------------------------------
+$button-color-default: #c73f42;
+$button-color-hover: darken($button-color-default, 10%);
+$button-color-active: darken($button-color-default, 15%);
