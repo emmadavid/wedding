@@ -1,6 +1,6 @@
 <section id="family-and-friends">
     <div class="content">
-        {mainContent}?format=main-content
+        <squarespace:block-field class="123" id="blockField1" columns="12"/>
     </div>
     <div class="instagram">
         <a href="#" class="next button">load more</a>
