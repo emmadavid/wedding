@@ -69,7 +69,8 @@ Castacencio.Router.AppRouter = Backbone.Router.extend({
 
 	_loadBridalSquadComponent: function() {
 		Castacencio.view.bridalSquadView = new Castacencio.View.BridalSquadView({
-			el: $( '#bridal-squad' )
+			el: $( '#bridal-squad' ),
+			overlay: $('.md-overlay')
 		});
 	},
 

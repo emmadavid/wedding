@@ -62,7 +62,7 @@
         <squarespace:block-field id="footerBlocks" columns="12"/>
     </footer>
 </div>
-
+<div class="md-overlay"></div>
 <!--Combo and minify the scripts when you're not logged in.-->
 <squarespace:script src="app.js" combo="{.if authenticatedAccount}false{.or}true{.end}"/>
 {squarespace-footers}

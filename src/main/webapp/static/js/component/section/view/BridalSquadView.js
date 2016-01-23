@@ -1,13 +1,12 @@
 Castacencio.View.BridalSquadView = Backbone.View.extend({
 
 	events: {
-		'click a.ladies': 'enableLadiesHalf',
-		'click a.gents': 'enableGentsHalf'
+		'click > div': 'openGallery'
 	},
 
-	initialize: function() {
-		this.ladiesSection = this.$('.ladies-half');
-		this.gentsSection = this.$('.gents-half');
+	initialize: function(options) {
+		this.overlay = options.overlay;
+		this.galleries = {};
 
 		this.render();
 	},
@@ -16,43 +15,34 @@ Castacencio.View.BridalSquadView = Backbone.View.extend({
 		var ladies = [];
 		var gents = [];
 
-		_.each( Castacencio.collection.galleryItems.models, function( item ) {
-			if ( _.contains( item.get( 'tags' ), 'ladies' ) ) {
-				ladies.push( item );
-			} else if ( _.contains( item.get( 'tags' ), 'gents' ) ) {
-				gents.push( item );
+		_.each(Castacencio.collection.galleryItems.models, function(item) {
+			if (_.contains( item.get('tags'), 'ladies')) {
+				ladies.push(item);
+			} else if (_.contains(item.get('tags'), 'gents')) {
+				gents.push(item);
 			}
 		}, this);
 
-		Castacencio.view.ladiesGalleryItemListView = new Castacencio.View.GalleryItemListView({
+		this.galleries.ladies = new Castacencio.View.GalleryItemListView({
 			collection: ladies,
-			bioSection: this.gentsSection,
-			gallerySection: this.ladiesSection
+			overlay: this.overlay
 		});
 
-		Castacencio.view.gentsGalleryItemListView = new Castacencio.View.GalleryItemListView({
+		this.galleries.gents = new Castacencio.View.GalleryItemListView({
 			collection: gents,
-			bioSection: this.ladiesSection,
-			gallerySection: this.gentsSection
+			overlay: this.overlay
 		});
 
 		return this;
 	},
 
-	enableLadiesHalf: function(event) {
-		event.preventDefault();
-
-		Backbone.pubSub.trigger( 'DESTROY_BIO', {} );
-		this.ladiesSection.removeClass( 'inactive' ).addClass('active');
-		this.gentsSection.removeClass( 'active' ).addClass('inactive');
+	openGallery: function(event) {
+		this.$el.toggleClass('open');
+		this.loadGallery(event.currentTarget.className);
 	},
 
-	enableGentsHalf: function(event) {
-		event.preventDefault();
-
-		Backbone.pubSub.trigger( 'DESTROY_BIO', {} );
-		this.gentsSection.removeClass( 'inactive' ).addClass('active');
-		this.ladiesSection.removeClass( 'active' ).addClass('inactive');
+	loadGallery: function(gallery) {
+		this.galleries[gallery].$el.appendTo(this.$el);
 	},
 
 	destroy: function() {

@@ -1,106 +1,57 @@
-// TODO: Clean up with settings/variables.
 #bridal-squad {
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-attachment: scroll;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+	background-color: $white;
 
-	h2 {
-		margin: 0;
-		line-height: .85em;
-		letter-spacing: .015em;
-		padding-top: 200px;
-		text-align: center;
-	}
-
-	.ladies-half,
-	.gents-half{
-		@include transition( background-color $base-duration $base-timing );
+	.gents, .ladies {
+		@include background-size(cover);
+		@include transition(all ($base-duration * 2) $base-timing);
+		background-attachment: scroll;
+		background-position: center center;
+		background-repeat: no-repeat;
+		cursor: pointer;
+		height: 100%;
 		position: absolute;
 		width: 50%;
-		height: 100%;
 
-		h2 a {
-			display: inline-block;
-			padding: 0 1em;
-			position: relative;
-
-			visibility: visible;
-  			opacity: 1;
-
-			&:before {
-				content: "";
-				position: absolute;
-				width: 100%;
-				height: 3px;
-				bottom: 0;
-				left: 0;
-				background-color: #000;
-				visibility: hidden;
-				-webkit-transform: scaleX(0);
-				transform: scaleX(0);
-				-webkit-transition: all 0.3s ease-in-out 0s;
-				transition: all 0.3s ease-in-out 0s;
-			}
+		&:after {
+			@include background-size(cover);
+			background-attachment: scroll;
+			background-position: center center;
+			background-repeat: no-repeat;
+			content: '';
+			cursor: pointer;
+			display: block;
+			height: 100%;
+			opacity: 0;
+			position: absolute;
+			width: 100%;
 		}
 
-		&.inactive {
-			background-color: rgba(32, 23, 19, 0.7);
-
-			h2 {
-				visibility: hidden;
-  				opacity: 0;
-  				transition: visibility 0s, opacity 0.5s linear;
-			}
-		}
-
-		&.active, &:hover {
-			h2 a {
-				&:before {
-					visibility: visible;
-					-webkit-transform: scaleX(1);
-					transform: scaleX(1);
-				}
+		&:hover, &.active {
+			&:after {
+				opacity: 1;
 			}
 		}
 	}
 
-	.ladies-half {
+	.ladies {
+		background-image: url('/assets/bridal_squad_left_default.jpg');
 		left: 0;
 
-		h2 a {
-			color: #D7AE1D;
-			float: right;
-
-			&:before {
-				background-color: #D7AE1D;
+		&:hover, &.active {
+			&:after {
+				background-image: url('/assets/bridal_squad_left_hover.jpg');
 			}
 		}
 	}
 
-	.gents-half {
+	.gents {
+		background-image: url('/assets/bridal_squad_right_default.jpg');
 		right: 0;
 
-		h2 a {
-			color: $white;
-			float: left;
-
-			&:before {
-				background-color: $white;
+		&:hover, &.active {
+			&:after {
+				background-image: url('/assets/bridal_squad_right_hover.jpg');
 			}
-		}
-	}
-
-	.bio {
-		margin: 0 auto;
-		width: 65%;
-
-		img {
-			width: 250px;
-			height: 250px;
 		}
 	}
 
@@ -109,4 +60,15 @@
 		display: block;
 		padding-top: percentage($section-image-bridal-squad-height / $section-image-bridal-squad-width);
 	}
+
+	&.open {
+		.ladies {
+			@include transform(translate3d(-100%, 0, 0));
+		}
+
+		.gents {
+			@include transform(translate3d(100%, 0, 0));
+		}
+	}
+
 }

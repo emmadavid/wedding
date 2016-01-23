@@ -1,0 +1,107 @@
+.md-modal {
+	@include backface-visibility(hidden);
+	@include transform(translateX(-50%) translateY(-50%));
+	height: auto;
+	left: 50%;
+	max-width: 630px;
+	min-width: 320px;
+	position: fixed;
+	top: 50%;
+	visibility: hidden;
+	width: 50%;
+	z-index: 2000;
+
+	img {
+		width: auto;
+	}
+}
+
+.md-show {
+	visibility: visible;
+}
+
+.md-overlay {
+	@include transition(all 0.3s);
+	background: rgba(143, 27, 15, 0.8);
+	height: 100%;
+	left: 0;
+	opacity: 0;
+	position: fixed;
+	top: 0;
+	visibility: hidden;
+	width: 100%;
+	z-index: 1000;
+}
+
+.md-show ~ .md-overlay {
+	opacity: 1;
+	visibility: visible;
+}
+
+.md-content {
+	background: #e74c3c;
+	border-radius: 3px;
+	color: $white;
+	margin: 0 auto;
+	position: relative;
+}
+
+.md-content h3 {
+	background: rgba(0, 0 ,0 , 0.1);
+	border-radius: 3px 3px 0 0;
+	font-size: 2.4em;
+	font-weight: 300;
+	margin: 0;
+	opacity: 0.8;
+	padding: 0.4em;
+	text-align: center;
+}
+
+.md-content > div {
+	font-size: 1.15em;
+	font-weight: 300;
+	margin: 0;
+	padding: 15px 40px 30px;
+}
+
+.md-content > div p {
+	margin: 0;
+	padding: 10px 0;
+}
+
+.md-content > div ul {
+	margin: 0;
+	padding: 0 0 30px 20px;
+}
+
+.md-content > div ul li {
+	padding: 5px 0;
+}
+
+.md-content button {
+	display: block;
+	margin: 0 auto;
+	font-size: 0.8em;
+}
+
+
+
+.md-effect-12 .md-content {
+	@include transform(scale(0.8));
+	@include transition(all, 0.3s);
+	opacity: 0;
+}
+
+.md-show.md-effect-12 ~ .md-overlay {
+	background: #e74c3c;
+}
+
+.md-effect-12 .md-content h3,
+.md-effect-12 .md-content {
+	background: transparent;
+}
+
+.md-show.md-effect-12 .md-content {
+	@include transform(scale(1));
+	opacity: 1;
+}

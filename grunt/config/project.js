@@ -31,6 +31,7 @@ module.exports = {
 			jsPath + '/vendor/scrollmagic.min.js',
 			jsPath + '/vendor/underscore-min.js',
 			jsPath + '/vendor/backbone-min.js',
+			jsPath + '/vendor/imagesloaded.pkgd.min.js',
 
 			jsPath + '/main.js',
 			jsPath + '/templates.js',
@@ -54,7 +55,8 @@ module.exports = {
 			jsPath + '/component/gallery/collection/GalleryItems.js',
 			jsPath + '/component/gallery/view/GalleryItemListView.js',
 			jsPath + '/component/gallery/view/GalleryItemView.js',
-			jsPath + '/component/gallery/view/GalleryItemBioView.js',
+
+			jsPath + '/component/modal/view/ModalView.js',
 
 			jsPath + '/component/app/view/ScrollControllerView.js',
 
