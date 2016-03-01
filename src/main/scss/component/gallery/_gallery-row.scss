@@ -1,0 +1,14 @@
+.gallery-row {
+	max-width: 1000px;
+	margin: 0 0 30px 0;
+
+	& > ul {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+
+.gents .gallery .gallery-row {
+	max-width: 700px;
+}

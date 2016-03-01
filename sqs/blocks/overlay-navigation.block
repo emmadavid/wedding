@@ -1,4 +1,4 @@
-<nav data-content-field="navigation-site-nav">
+<nav class="overlay-navigation" data-content-field="navigation-site-nav">
 	<ul>
 		{.repeated section items}
 		{.section collection}

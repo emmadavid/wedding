@@ -13,24 +13,41 @@
 
 	h2 {
 		font-size: 40px;
+		margin-top: 0;
 	}
 
 	h3 {
 		font-size: 23px;
+
+		@include media($mobile) {
+			margin-top: 5%;
+		}
 	}
 
 	ul {
 		margin: 0 auto;
-		width: 1270px;
+
+		@include media($mobile) {
+			margin-top: 10%;
+		}
 	}
 
 	li {
 		float: left;
-		width: 380px;
+		width: 30%;
+		margin-left: 5%;
 
-		&:nth-child( 2 ) {
-			margin: 0 65px;
+		&:first-child {
+			margin-left: 0;
 		}
+
+		@include media($mobile) {
+			width: 100%;
+			margin-left: 0;
+			margin-top: 10%;
+		}
+
+
 	}
 
 	img {

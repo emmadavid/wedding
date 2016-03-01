@@ -3,17 +3,25 @@ Castacencio.View.InstagramImageListView = Backbone.View.extend({
 	tagName: 'ul',
 	className: 'instagram-images',
 
-	initialize: function( options ) {
+	itemCount: 0,
+
+	initialize: function(options) {
 		this.container = options.container;
+		this.nextButton = options.nextButton;
 	},
 
 	render: function() {
-		// TODO: switch out for underscore.
-		for ( var i = 0; i < this.collection.length; i++ ) {
-			this.renderItem( this.collection.models[ i ] );
+		if (this.collection.length > 0) {
+			_.each(this.collection.models, function(image) {
+				this.renderItem(image);
+			}, this);
+
+			this.$el.prependTo(this.container);
 		}
 
-		this.$el.prependTo( this.container );
+		if (!this.collection.url) {
+			this.nextButton.remove();
+		}
 
 		return this;
 	},
@@ -22,12 +30,20 @@ Castacencio.View.InstagramImageListView = Backbone.View.extend({
 		this.collection.fetchNext();
 	},
 
-	renderItem: function ( model ) {
+	renderItem: function (model) {
 		var item = new Castacencio.View.InstagramImageView({
 			model: model
 		});
 
-		item.render().$el.appendTo( this.$el );
-	}
+		this.itemCount++;
+		item.render().$el.appendTo(this.$el);
 
+		if (this.itemCount % 3 === 0) {
+			this.appendLineBreak();
+		}
+	},
+
+	appendLineBreak: function() {
+		$('<li class="line-break"></li>').appendTo(this.$el);
+	}
 });

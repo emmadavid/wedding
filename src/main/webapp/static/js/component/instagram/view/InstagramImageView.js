@@ -2,7 +2,7 @@ Castacencio.View.InstagramImageView = Backbone.View.extend({
 
 	tagName: 'li',
 	className: 'instagram-image',
-	template: window[ 'Castacencio' ][ 'instagram-image-template' ],
+	template: window['Castacencio']['instagram-image-template'],
 
 	initialize: function() {
 	},

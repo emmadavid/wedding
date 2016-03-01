@@ -1,6 +1,6 @@
 #logo {
 	@include hide-text;
-	@include transition( opacity $base-duration $base-timing );
+	@include transition(opacity $base-duration $base-timing);
 	@include vertical-align;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -16,5 +16,9 @@
 
 	a {
 		display: block;
+	}
+
+	@include media($mobile) {
+		width: 6rem;
 	}
 }

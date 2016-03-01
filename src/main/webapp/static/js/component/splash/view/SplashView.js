@@ -1,12 +1,13 @@
 Castacencio.View.SplashView = Backbone.View.extend({
 
 	initialize: function( options ) {
-		_.bindAll( this, 'fadeOutSplashImage', 'shrinkMonogram', 'fadeInSite', 'destroy' );
+		_.bindAll(this, 'fadeOutSplashImage', 'shrinkMonogram', 'fadeInSite', 'destroy');
 
 		this.defaultDuration = 1000;
 
 		this.site = options.site;
 		this.logo = options.logo;
+
 		this.flower = this.$('#splash-layer-petals, #splash-layer-flowers');
 		this.monogram = this.$('#splash-layer-monogram');
 
@@ -14,6 +15,7 @@ Castacencio.View.SplashView = Backbone.View.extend({
 	},
 
 	render: function() {
+		this.site.hide();
 		this.slideUpSplashImage();
 
 		return this;
@@ -49,15 +51,12 @@ Castacencio.View.SplashView = Backbone.View.extend({
 	},
 
 	fadeInSite: function() {
-		Backbone.pubSub.trigger('SPLASH_ANIMATION_END', {});
-		this.site.velocity({
-			opacity: 1
-		},{
-			duration: this.defaultDuration,
-			complete: this.destroy
+		this.site.show();
+		this.site.css({
+			'opacity': 0
 		});
-
 		this.setCookie();
+		this.destroy();
 	},
 
 	setCookie: function() {
@@ -65,6 +64,12 @@ Castacencio.View.SplashView = Backbone.View.extend({
 	},
 
 	destroy: function() {
+		Backbone.pubSub.trigger('SPLASH_ANIMATION_END', {});
+
+		this.site.css({
+			'opacity': 1
+		});
+
 		this.logo.show();
 		this.$el.remove();
 

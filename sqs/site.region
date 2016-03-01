@@ -3,9 +3,15 @@
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="initial-scale=1">
+    <meta charset="utf-8" />
     {squarespace-headers}
 </head>
 <body id="{squarespace.page-id}" class="{squarespace.page-classes} tk-raleway">
+<div id="loader-container">
+	<span id="loader-percentage-line">
+		<span id="loader-percentage"></span>
+	</span>
+</div>
 <div id="splash">
     <squarespace:query collection="splash">
         {@|apply splash.block}
@@ -18,8 +24,14 @@
             <a href="/">{siteTitle}</a>
         </h1>
         {.end}
-        <squarespace:navigation navigationId="site-nav" template="navigation"/>
+        <squarespace:navigation navigationId="site-nav" template="top-navigation"/>
     </header>
+    <a class="hamburger-menu" data="hamburger-menu">
+        <b></b>
+        <b></b>
+        <b></b>
+    </a>
+    <squarespace:navigation navigationId="site-nav" template="overlay-navigation"/>
     <main id="page" class="content" role="main">
         <squarespace:query collection="hero">
             {@|apply hero.block}
@@ -37,26 +49,24 @@
             {@|apply bridal-squad.block}
         </squarespace:query>
 
-        <squarespace:query collection="accommodations-gallery">
+
+        <squarespace:query collection="accommodations">
             {@|apply accommodations.block}
         </squarespace:query>
 
-        <squarespace:query collection="gift-registry-gallery">
-            {@|apply gift-registry.block}
-        </squarespace:query>
 
         <section id="sneak-peek">
-            <h2>Places, people and things.</h2>
-            <p>Weddings are about the celebration between two crazy humans deciding to proclaim their sweet devotion to each other in front of their
-                dearest family and friends. And while we hope that on our wedding day you see and feel the love between us, there are these other places,
-                people, and things that will help us celebrate in our way. So here is a sneak peek of our wedding day. We wanted to hire vendors that had
-                a connection with us.</p>
+            <squarespace:block-field id="sneak-peek-content" columns="12"/>
             <ul>
                 <squarespace:query collection="sneak-peek-gallery">
                     {@|apply sneak-peek.block}
                 </squarespace:query>
             </ul>
         </section>
+
+        <squarespace:query collection="gift-registry-gallery">
+            {@|apply gift-registry.block}
+        </squarespace:query>
     </main>
     <footer id="footer" class="footer">
         <squarespace:block-field id="footerBlocks" columns="12"/>
@@ -64,6 +74,7 @@
 </div>
 <div class="md-overlay"></div>
 <!--Combo and minify the scripts when you're not logged in.-->
+<squarespace:script src="preload.js" combo="{.if authenticatedAccount}false{.or}true{.end}"/>
 <squarespace:script src="app.js" combo="{.if authenticatedAccount}false{.or}true{.end}"/>
 {squarespace-footers}
 </body>

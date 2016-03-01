@@ -1,7 +1,10 @@
 Castacencio.View.BridalSquadView = Backbone.View.extend({
 
 	events: {
-		'click > div': 'openGallery'
+		'click .ladies': 'openGallery',
+		'click .gents': 'openGallery',
+		'click h2 a': 'openGallery',
+		'click .close-overlay': 'closeGallery'
 	},
 
 	initialize: function(options) {
@@ -37,12 +40,26 @@ Castacencio.View.BridalSquadView = Backbone.View.extend({
 	},
 
 	openGallery: function(event) {
-		this.$el.toggleClass('open');
+		event.preventDefault();
+
+		this.$el.addClass(event.currentTarget.className);
+		$('html').addClass('no-scroll');
 		this.loadGallery(event.currentTarget.className);
 	},
 
+	closeGallery: function() {
+		$('html').removeClass('no-scroll');
+		this.unloadGallery();
+		this.$el.removeClass('open gents ladies');
+	},
+
 	loadGallery: function(gallery) {
-		this.galleries[gallery].$el.appendTo(this.$el);
+		this.activeGallery = this.galleries[gallery];
+		this.activeGallery.$el.appendTo(this.$el);
+	},
+
+	unloadGallery: function(gallery) {
+		this.activeGallery.$el.detach();
 	},
 
 	destroy: function() {

@@ -7,13 +7,23 @@
 	-o-background-size: cover;
 	background-size: cover;
 
+	@include media($mobile) {
+		min-height: 55vh;
+	}
+
 	a {
-		display: inline-block;
+		-webkit-mask: url("/assets/zola.svg") no-repeat center;
+		display: block;
 		position: absolute;
-		width: 16%;
-		height: 13%;
-		top: 56%;
-		left: 42%;
+		width: 33%;
+		height: 28%;
+		top: 33%;
+		left: 33%;
+		background-color: $white;
+
+		&:hover {
+			background-color: #F6546A;
+		}
 	}
 
 	&:after {

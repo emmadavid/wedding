@@ -5,12 +5,15 @@ Castacencio.View.FriendsFamilyView = Backbone.View.extend({
 	},
 
 	initialize: function() {
+		Castacencio.collection.instagramImages = new Castacencio.Collection.InstagramImages();
+
 		Castacencio.view.instagramImageListView = new Castacencio.View.InstagramImageListView({
-			container: this.$( '.instagram' ),
-			collection: Castacencio.collection.instagramImages
+			container: this.$('.instagram'),
+			collection: Castacencio.collection.instagramImages,
+			nextButton: this.$('.next')
 		});
 
-		Castacencio.collection.instagramImages.deferred.done( function () {
+		Castacencio.collection.instagramImages.deferred.done(function() {
 			Castacencio.view.instagramImageListView.render();
 		});
 
@@ -18,11 +21,13 @@ Castacencio.View.FriendsFamilyView = Backbone.View.extend({
 	},
 
 	render: function() {
+		window.fitText(document.getElementById("hashtag"));
+
 		return this;
 	},
 
 	// TODO: Cleanup pagination code.
-	fetchNext: function( event ) {
+	fetchNext: function(event) {
 		event.preventDefault();
 
 		Castacencio.view.instagramImageListView.fetchNext();
@@ -34,7 +39,7 @@ Castacencio.View.FriendsFamilyView = Backbone.View.extend({
 		this.undelegateEvents();
 		this.remove();
 
-		Backbone.View.prototype.remove.call( this );
+		Backbone.View.prototype.remove.call(this);
 	}
 
 });

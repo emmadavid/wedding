@@ -1,9 +1,9 @@
 {.section collection}
     {.section mainImage}
-<section id="our-story" style="background-image: url('{assetUrl}?format=original');">
+<section id="our-story" class="cover-image contrasting-title" style="background-image: url('{assetUrl}?format=original');">
     {.end}
 {.end}
-    <h2>Our Story</h2>
+    <h2 class="contrasting-title">Our Story</h2>
     <div class="gallery-container">
         {.repeated section items}
             {.equal? urlId "emma"}
@@ -18,14 +18,20 @@
     {.repeated section items}
         {.equal? urlId "emma"}
             <div class="overlay emma">
-                <h3>{title}</h3>
-                {body}
+                <a class="close-overlay" style="transform: rotateZ(135deg);"><b class="" style="top: 50%;"></b><b></b><b class="" style="top: 50%; transform: rotateZ(90deg);"></b></a>
+                <div class="overlay-content">
+                    <h3>{title}</h3>
+                    {body}
+                </div>
             </div>
         {.or}{.end}
         {.equal? urlId "david"}
             <div class="overlay david">
-                <h3>{title}</h3>
-                {body}
+                <a class="close-overlay" style="transform: rotateZ(135deg);"><b class="" style="top: 50%;"></b><b></b><b class="" style="top: 50%; transform: rotateZ(90deg);"></b></a>
+                <div class="overlay-content">
+                    <h3>{title}</h3>
+                    {body}
+                </div>
             </div>
         {.or}{.end}
     {.end}

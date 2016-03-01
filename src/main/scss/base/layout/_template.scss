@@ -2,14 +2,28 @@
 
 html {
 	font-size: $base-font-size;
+
+	&.no-scroll {
+		overflow: hidden;
+	}
+}
+
+.no-scroll {
+	body {
+		overflow: hidden;
+	}
 }
 
 body {
-	@include font-feature-settings( 'liga kern pnum' );
+	@include font-feature-settings('liga kern pnum');
 	@include font-smoothing;
 	background-color: $gray-darkest;
 	color: $base-font-color;
 	line-height: $base-line-height;
+}
+
+main {
+	overflow: hidden;
 }
 
 h1,
@@ -23,8 +37,8 @@ h4 {
 }
 
 h1 {
-	margin-top: 0;
 	font-size: 3.998em;
+	margin-top: 0;
 }
 
 h2 {
@@ -39,8 +53,7 @@ h4 {
 	font-size: 1.414em;
 }
 
-small,
-.font_small {
+small {
 	font-size: 0.707em;
 }
 
@@ -50,14 +63,14 @@ p {
 }
 
 ul {
-	@include padding-start( 0 );
-	@include margin-before( 0 );
-	@include margin-after( 0 );
+	@include padding-start(0);
+	@include margin-before(0);
+	@include margin-after(0);
 }
 
 a {
 	@include transition(color $base-duration $base-timing);
-	color: rgba( $base-font-color, $link-opacity-default );
+	color: rgba($base-font-color, $link-opacity-default);
 	font-weight: $link-weight-default;
 	text-decoration: none;
 
@@ -77,11 +90,12 @@ img {
 
 section {
 	min-height: 100vh;
-	position: relative;
 	overflow: hidden;
+	position: relative;
 }
 
 #site {
-	@include outer-container( 100% );
+	@include outer-container(100%);
+	@include transition(opacity ($base-duration * 5) $base-timing);
 	opacity: 0;
 }

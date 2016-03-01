@@ -1,15 +1,26 @@
 .md-modal {
 	@include backface-visibility(hidden);
-	@include transform(translateX(-50%) translateY(-50%));
-	height: auto;
-	left: 50%;
-	max-width: 630px;
-	min-width: 320px;
+	background: #616365;
+	//@include transform(translateX(-50%) translateY(-50%));
+	//height: auto;
+	//left: 50%;
+	//max-width: 630px;
+	//min-width: 320px;
 	position: fixed;
-	top: 50%;
+	//top: 50%;
 	visibility: hidden;
-	width: 50%;
-	z-index: 2000;
+	//width: 50%;
+	z-index: 3;
+
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	overflow-y: scroll;
+	-webkit-overflow-scrolling:touch;
 
 	img {
 		width: auto;
@@ -22,7 +33,7 @@
 
 .md-overlay {
 	@include transition(all 0.3s);
-	background: rgba(143, 27, 15, 0.8);
+	background: #616365;
 	height: 100%;
 	left: 0;
 	opacity: 0;
@@ -30,7 +41,7 @@
 	top: 0;
 	visibility: hidden;
 	width: 100%;
-	z-index: 1000;
+	z-index: 2;
 }
 
 .md-show ~ .md-overlay {
@@ -39,18 +50,20 @@
 }
 
 .md-content {
-	background: #e74c3c;
+	background: #616365;
 	border-radius: 3px;
 	color: $white;
 	margin: 0 auto;
-	position: relative;
+	position: static;
+	padding-top: 40px;
+	max-width: 680px;
 }
 
 .md-content h3 {
 	background: rgba(0, 0 ,0 , 0.1);
 	border-radius: 3px 3px 0 0;
 	font-size: 2.4em;
-	font-weight: 300;
+	font-weight: 400;
 	margin: 0;
 	opacity: 0.8;
 	padding: 0.4em;
@@ -67,6 +80,8 @@
 .md-content > div p {
 	margin: 0;
 	padding: 10px 0;
+	color: rgba(255, 255, 255, 0.6);
+	font-weight: 400;
 }
 
 .md-content > div ul {
@@ -93,7 +108,7 @@
 }
 
 .md-show.md-effect-12 ~ .md-overlay {
-	background: #e74c3c;
+	background: #616365;
 }
 
 .md-effect-12 .md-content h3,

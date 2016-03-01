@@ -24,7 +24,6 @@ module.exports = {
 	js: {
 		path: jsPath,
 		in: [
-			jsPath + '/vendor/jquery-2.1.4.min.js',
 			jsPath + '/vendor/slick.min.js',
 			jsPath + '/vendor/velocity.min.js',
 			jsPath + '/vendor/velocity.ui.js',
@@ -32,6 +31,7 @@ module.exports = {
 			jsPath + '/vendor/underscore-min.js',
 			jsPath + '/vendor/backbone-min.js',
 			jsPath + '/vendor/imagesloaded.pkgd.min.js',
+			jsPath + '/vendor/fittext.js',
 
 			jsPath + '/main.js',
 			jsPath + '/templates.js',
@@ -39,6 +39,8 @@ module.exports = {
 			jsPath + '/component/splash/view/SplashView.js',
 
 			jsPath + '/component/nav/view/NavView.js',
+			jsPath + '/component/nav/view/HamburgerMenuView.js',
+			jsPath + '/component/nav/view/OverlayNavView.js',
 
 			jsPath + '/component/hero/view/HeroView.js',
 
@@ -62,7 +64,12 @@ module.exports = {
 
 			jsPath + '/component/app/router/AppRouter.js'
 		],
-		out: sqsScriptPath + '/app.js'
+		preloadIn: [
+			jsPath + '/vendor/jquery-2.2.1.min.js',
+			jsPath + '/component/app/view/preload.js'
+		],
+		out: sqsScriptPath + '/app.js',
+		preloadOut: sqsScriptPath + '/preload.js'
 	},
 
 	scss: {

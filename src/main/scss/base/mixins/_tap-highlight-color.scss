@@ -1,5 +1,5 @@
-@mixin tap-highlight-color( $val ) {
-	-webkit-tap-highlight-color: $val;
+@mixin tap-highlight-color($val) {
 	-moz-tap-highlight-color: $val;
+	-webkit-tap-highlight-color: $val;
 	tap-highlight-color: $val;
 }

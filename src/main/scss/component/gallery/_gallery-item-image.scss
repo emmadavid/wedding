@@ -1,16 +1,18 @@
 .gallery figure {
-	background: #3085a3;
+	//background: #3085a3;
 	cursor: pointer;
 	float: left;
 	height: auto;
 	margin: 10px 1%;
-	max-height: 360px;
+	//max-height: 360px;
+	max-height: 100%;
 	max-width: 480px;
-	min-width: 320px;
+	//min-width: 320px;
+	min-width: 98%;
 	overflow: hidden;
 	position: relative;
-	text-align: center;
-	width: 48%;
+	//text-align: center;
+	//width: 48%;
 
 	img {
 		@include backface-visibility(hidden);
@@ -21,7 +23,7 @@
 		display: block;
 		max-width: none;
 		min-height: 100%;
-		opacity: 0.8;
+		//opacity: 0.8;
 		position: relative;
 	}
 

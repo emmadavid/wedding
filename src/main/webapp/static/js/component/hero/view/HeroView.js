@@ -6,8 +6,8 @@ Castacencio.View.HeroView = Backbone.View.extend({
 
 	render: function() {
 		this.$el.slick({
-			autoplay: false,
-			autoplaySpeed: 5000,
+			autoplay: true,
+			autoplaySpeed: 10000,
 			centerMode: false,
 			pauseOnHover: false
 		});

@@ -13,20 +13,16 @@ Castacencio.Router.AppRouter = Backbone.Router.extend({
 
 	render: function () {
 		if (!Castacencio.Util.readCookie('skipAnimation')) {
-			this.site.hide();
 			this._loadSplashComponent();
 			Backbone.pubSub.on('SPLASH_ANIMATION_END', this.loadModules, this);
 		} else {
 			this.splash.remove();
-			this.site.css('opacity', 1);
 			this.logo.show();
 			this.loadModules();
 		}
 	},
 
 	loadModules: function() {
-		this.site.show();
-
 		this._loadNavComponent();
 		this._loadHeroComponent();
 		this._loadOurStoryComponent();
@@ -45,7 +41,16 @@ Castacencio.Router.AppRouter = Backbone.Router.extend({
 
 	_loadNavComponent: function() {
 		Castacencio.view.navView = new Castacencio.View.NavView({
-			el: $( 'nav' )
+			el: $( 'nav.top-navigation' )
+		});
+
+		Castacencio.view.hamburgerMenuView = new Castacencio.View.HamburgerMenuView({
+			el: $('.hamburger-menu')
+		});
+
+		Castacencio.view.overlayNavView = new Castacencio.View.OverlayNavView({
+			el: $('.overlay-navigation'),
+			hamburgerMenu: Castacencio.view.hamburgerMenuView
 		});
 	},
 

@@ -1,0 +1,34 @@
+//.overlay-close {
+//
+//}
+
+.gallery {
+	.close-overlay {
+		position: absolute;
+		margin-top: 1.25em;
+		margin-left: 1.25em;
+		width: $overlay-close-width;
+		height: $overlay-close-height;
+		cursor: pointer;
+
+		top: -2px;
+		right: 12px;
+
+		b {
+			position: absolute;
+			left: 0;
+			width: $overlay-close-bar-width;
+			height: $overlay-close-bar-height;
+			background-color: $overlay-close-color;
+			&:nth-child(1) {
+				top: 0;
+			}
+			&:nth-child(2) {
+				top: 50%;
+			}
+			&:nth-child(3) {
+				top: 100%;
+			}
+		}
+	}
+}

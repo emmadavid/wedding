@@ -1,0 +1,143 @@
+// TODO: Clean up with settings/variables.
+#our-story {
+	.gallery-container {
+		@include centerer;
+		left: 70%;
+		text-align: right;
+		width: em( 440px );
+
+		a {
+			@include transition( border-color $base-duration $base-timing );
+
+			border: .5em solid rgba(255,255,255,0.65);
+			display: inline-block;
+			height: 100%;
+			max-width: em( 268px );
+			max-height: em( 268px );
+			min-height: em( 268px );
+			width: 100%;
+
+			&:first-child {
+				margin-bottom: em( 35px );
+			}
+
+			&:hover {
+				border-color: rgba( 255, 255, 255, 0.9 );
+			}
+		}
+
+
+
+		&:after {
+			display: block;
+			content: '';
+			background: url( '/assets/story-names.svg' ) no-repeat left em( 243px ) scroll;
+			background-size: 35%;
+			padding-top: percentage(450px / 363px);
+			width: 100%;
+			top: 0;
+			position: absolute;
+			z-index: -1;
+		}
+
+		@include media($mobile) {
+			text-align: center;
+			left: 50%;
+
+			&:after {
+				display: none;
+			}
+		}
+	}
+
+	.overlay {
+		background-color: rgba(28, 21, 19, .93);
+		display: none;
+		height: 100%;
+		padding: 2rem;
+		position: fixed;
+		width: 100%;
+		z-index: 1;
+
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+
+		overflow-y: scroll;
+		-webkit-overflow-scrolling:touch;
+
+		.overlay-content {
+			max-width: 50%;
+			margin: 5rem auto;
+			position: static;
+
+			p {
+				color: rgba(255, 255, 255, 0.6);
+				font-weight: 400;
+
+				strong {
+					color: $white;
+				}
+			}
+		}
+
+		@include media($mobile) {
+			.overlay-content {
+				max-width: none;
+				margin: 1rem auto;
+			}
+		}
+	}
+
+	&:after {
+		padding-top: percentage($section-image-our-story-height / $section-image-our-story-width);
+	}
+
+
+
+
+
+	.close-overlay {
+		$bar-w: 23px;
+		$bar-h: 2px;
+		$bar-color: white;
+		position: absolute;
+		margin-top: 1.25em;
+		margin-left: 1.25em;
+		width: $bar-w;
+		height: ($bar-w *3) /4;
+		cursor: pointer;
+		z-index: 3;
+		right: 10%;
+		top: 3%;
+
+		b {
+			position: absolute;
+			left: 0;
+			width: $bar-w;
+			height: $bar-h;
+			background-color: $bar-color;
+			&:nth-child(1) {
+				top: 0;
+			}
+			&:nth-child(2) {
+				top: 50%;
+			}
+			&:nth-child(3) {
+				top: 100%;
+			}
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+}

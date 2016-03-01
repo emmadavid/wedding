@@ -6,7 +6,8 @@ module.exports = {
 	closurecompiler: {
 		minify: {
 			files: {
-				[ project.js.out ]: project.js.in
+				[project.js.preloadOut]: project.js.preloadIn,
+				[project.js.out]: project.js.in
 			},
 			options: {
 				"compilation_level": "SIMPLE_OPTIMIZATIONS",

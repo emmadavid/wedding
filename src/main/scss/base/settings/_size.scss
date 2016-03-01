@@ -15,6 +15,20 @@ $nav-item-space: 35px;
 $button-height: 55px;
 $button-width: 200px;
 
+// Overlay
+// ------------------------------
+$overlay-close-bar-height: 2px;
+$overlay-close-bar-width: 23px;
+$overlay-close-width: $overlay-close-bar-width;
+$overlay-close-height: ($overlay-close-bar-width * 3) / 4;
+
+// Contrasting Title
+// ------------------------------
+$contrasting-title-height: 100px;
+$contrasting-title-height-mobile: 72px;
+$contrasting-title-line-height: 164px;
+$contrasting-title-line-height-mobile: 117px;
+
 // Section Images
 // ------------------------------
 $section-image-our-story-height: 800px;

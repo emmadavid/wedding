@@ -23,18 +23,24 @@ Castacencio.View.OurStoryView = Backbone.View.extend({
 	showEmmaStory: function( event ) {
 		event.preventDefault();
 
+		$('html').addClass('no-scroll');
+
 		this.emmaOverlay
-			.velocity("fadeIn", { duration: this.defaultDuration, display: "flex" });
+			.velocity("fadeIn", { duration: this.defaultDuration, display: "block" });
 	},
 
 	showDavidStory: function( event ) {
 		event.preventDefault();
 
+		$('html').addClass('no-scroll');
+
 		this.davidOverlay
-			.velocity("fadeIn", { duration: this.defaultDuration, display: "flex" });
+			.velocity("fadeIn", { duration: this.defaultDuration, display: "block" });
 	},
 
 	hideStory: function() {
+		$('html').removeClass('no-scroll');
+
 		this.overlay
 			.velocity("fadeOut", { duration: this.defaultDuration, display: "none" });
 	},

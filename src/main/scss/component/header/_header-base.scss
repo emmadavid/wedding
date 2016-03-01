@@ -4,4 +4,8 @@ header {
 	position: absolute;
 	width: 100%;
 	z-index: $header-zindex;
+
+	@include media($mobile) {
+		z-index: 3;
+	}
 }

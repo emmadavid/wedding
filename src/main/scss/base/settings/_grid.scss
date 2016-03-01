@@ -1,16 +1,12 @@
 $grid-columns: 12;
-
-
 $column: 80px;
 $gutter: 20px;
-// $grid-columns: 12;
-// $max-width: 1200px;
-
-
-
 $max-width: 1200px;
 
 $visual-grid: false;
-$visual-grid-color: $white;
+$visual-grid-color: #1c1513;
 $visual-grid-index: front;
 $visual-grid-opacity: 0.25;
+
+$tablet: new-breakpoint(max-width 1060px 8);
+$mobile: new-breakpoint(max-width 480px 4);

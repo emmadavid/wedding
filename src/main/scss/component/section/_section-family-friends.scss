@@ -1,35 +1,44 @@
 // TODO: Clean up with settings/variables.
 #family-and-friends {
 	background-color: $white;
+	padding-bottom: 20px;
 
 	h2 {
-		color: $black;
+		color: #f6546a;
 		font-weight: 200;
 		font-size: 17vw;
 		margin: 0;
 		text-align: center;
 	}
 
+	.accordion h2 {
+		font-size: 2em;
+	}
+
 	p {
-		color: $black;
+		color: #666666;
 		font-weight: 400;
 		margin: 0;
 
 		&:last-of-type {
+			color: $black;
+			font-weight: 300;
 			margin-top: 2em;
 		}
 	}
 
 	.content {
-		padding: 0 17vw;
+		padding: 20px 11% 40px 11%;
 	}
 
-	.hashtag {
-		color: #cd446d;
-		font-size: 3.25vw;
+	#hashtag {
+		color: #f6546a;
+		font-weight: 300;
+		margin-bottom: 20px;
+		text-align: center;
 
 		span {
-			color: #ab1e51;
+			color: #666666;
 		}
 	}
 }

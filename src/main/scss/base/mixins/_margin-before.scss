@@ -1,6 +1,6 @@
-@mixin margin-before( $margin ) {
-	-webkit-margin-before: $margin;
+@mixin margin-before($margin) {
 	-moz-margin-before: $margin;
 	-o-margin-before: $margin;
+	-webkit-margin-before: $margin;
 	margin-before: $margin;
 }

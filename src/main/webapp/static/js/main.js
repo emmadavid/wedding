@@ -1,18 +1,18 @@
 // App
-window.Castacencio = {};
+window.Castacencio = window.Castacencio || {};
 
 // Classes
-Castacencio.Model = {};
-Castacencio.Collection = {};
-Castacencio.View = {};
-Castacencio.Router = {};
-Castacencio.Util = {};
+Castacencio.Model = Castacencio.Model || {};
+Castacencio.Collection = Castacencio.Collection || {};
+Castacencio.View = Castacencio.View || {};
+Castacencio.Router = Castacencio.Router || {};
+Castacencio.Util = Castacencio.Util || {};
 
 // Instances
-Castacencio.model = {};
-Castacencio.collection = {};
-Castacencio.view = {};
-Castacencio.router = {};
+Castacencio.model = Castacencio.model || {};
+Castacencio.collection = Castacencio.collection || {};
+Castacencio.view = Castacencio.view || {};
+Castacencio.router = Castacencio.router || {};
 
 // Settings
 Castacencio.settings = {
@@ -49,8 +49,6 @@ $( function() {
 	Castacencio.Util.eraseCookie = function(name) {
 		Castacencio.Util.createCookie(name, "", -1);
 	};
-
-	Backbone.history.start();
 });
 
 /**

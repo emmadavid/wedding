@@ -1,6 +1,6 @@
-@mixin padding-start( $padding ) {
-	-webkit-padding-start: $padding;
+@mixin padding-start($padding) {
 	-moz-padding-start: $padding;
 	-o-padding-start: $padding;
+	-webkit-padding-start: $padding;
 	padding-start: $padding;
 }

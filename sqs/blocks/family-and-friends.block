@@ -1,8 +1,16 @@
 <section id="family-and-friends">
     <div class="content">
-        <squarespace:block-field class="123" id="blockField1" columns="12"/>
+        <squarespace:block-field id="family-and-friends-content" columns="12"/>
+        <!--<ul class="accordion">-->
+            <!--<li>-->
+                <!--<input type="checkbox" checked>-->
+                <!--<i></i>-->
+                <!--<h2>Why love and cocktails?</h2>-->
+                <!--<p>We hope this summarizes our wedding day in all it's juxtaposition. And perhaps it was inspired by all the wine and whiskey that has accompanied all our wedding planning. So on May 29th, come for the love and definitely stay for the cocktails!</p>-->
+            <!--</li>-->
+        <!--</ul>-->
     </div>
     <div class="instagram">
-        <a href="#" class="next button">load more</a>
+        <a href="#" class="next button">load more pictures</a>
     </div>
 </section>

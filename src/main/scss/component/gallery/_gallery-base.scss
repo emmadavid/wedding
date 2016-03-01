@@ -1,0 +1,18 @@
+.gallery {
+	@include align-items(center);
+	@include display(flex);
+	@include flex-direction(column);
+	@include justify-content(center);
+	@include overflow-scrolling;
+	//background-color: $overlay-color;
+	bottom: 0;
+	height: 100%;
+	left: 0;
+	list-style: none;
+	overflow-y: scroll;
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 100%;
+	z-index: $gallery-zindex;
+}

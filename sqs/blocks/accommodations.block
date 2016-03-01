@@ -1,15 +1,10 @@
-{.section collection}
-    {.section mainImage}
-<section id="accommodations" style="background-image: url('{assetUrl}?format=original');">
-    {.end}
-    <h2>{title}</h2>
-{.end}
-    <div class="content">
-        {.repeated section items}
-            <h3>{title}</h3>
-            {body}
-            <a href="{clickthroughUrl}" class="button" target="_blank">visit website</a>
-
-        {.end}
+{.section collection}{.section mainImage}
+<section id="accommodations" class="cover-image contrasting-title" style="background-image: url('{assetUrl}?format=original');">
+{.end}{.end}
+    <h2 class="contrasting-title">Accommodations</h2>
+    <div class="content-container">
+        <div class="content">
+            <squarespace:block-field id="accommodations-content" />
+        </div>
     </div>
 </section>
