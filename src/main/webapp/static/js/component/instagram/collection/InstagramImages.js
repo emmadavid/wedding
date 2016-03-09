@@ -4,11 +4,7 @@ Castacencio.Collection.InstagramImages = Backbone.Collection.extend({
 	url: 'https://api.instagram.com/v1/tags/loveandcocktails/media/recent?access_token=2782011.467ede5.e13594c3c9884b8386986d5657388691&callback=?',
 
 	startDate: new Date(2016, 1, 1), // February 1, 2016
-	blacklist: [
-		'1193686165048515285_2294070245',
-		'1181286119036187635_37774123',
-		'1179126188746040979_15121112'
-	],
+	blacklist: Castacencio.instagramBlacklist || [],
 	imagesAdded: 0,
 	numberToFetch: 6,
 	maxTagId: 0,

@@ -4,47 +4,45 @@
 
 'use strict';
 
-module.exports = function ( grunt ) {
-
-	require( 'matchdep' ).filterAll( 'grunt-*' ).forEach( grunt.loadNpmTasks );
-	require( 'load-grunt-tasks' )( grunt );
+module.exports = function (grunt) {
+	require('matchdep').filterAll('grunt-*').forEach(grunt.loadNpmTasks);
+	require('load-grunt-tasks')(grunt);
 
 	var config = {};
 
 	// Load options.
-	grunt.util._.extend( config, loadConfig( './grunt/options/' ) );
+	grunt.util._.extend(config, loadConfig('./grunt/options/'));
 
 	// Load tasks.
-	grunt.loadTasks( './grunt/tasks/' );
+	grunt.loadTasks('./grunt/tasks/');
 
 	// Initialize Grunt configuration.
-	grunt.initConfig( config );
+	grunt.initConfig(config);
 
-	function loadConfig( path ) {
-		var glob = require( 'glob' ),
+	function loadConfig(path) {
+		var glob = require('glob'),
 			configuration = {},
 			currentObject = {},
 			key;
 
 		// Loop through files in /options to recreate options object.
-		glob.sync( '*', { cwd: path } ).forEach( function ( option ) {
-			key = option.replace( /\.js$/, '' );
-			currentObject = require( path + option )[ key ];
+		glob.sync('*', {cwd: path}).forEach(function (option) {
+			key = option.replace(/\.js$/, '');
+			currentObject = require(path + option)[key];
 
 			// Pull all config to the top of the new object.
-			if ( typeof option === 'object' && option.hasOwnProperty( 'config' ) ) {
+			if (typeof option === 'object' && option.hasOwnProperty('config')) {
 				var objectClone = configuration;
-				configuration[ key ] = currentObject;
+				configuration[key] = currentObject;
 
-				for ( var prop in objectClone ) {
-					configuration[ prop ] = objectClone[ prop ];
+				for (var prop in objectClone) {
+					configuration[prop] = objectClone[prop];
 				}
 			} else {
-				configuration[ key ] = currentObject;
+				configuration[key] = currentObject;
 			}
 		} );
 
 		return configuration;
 	}
-
 };

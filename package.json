@@ -4,23 +4,22 @@
   "description": "Wedding website.",
   "main": "index.js",
   "repository": {
-	"type": "git",
-	"url": ""
+    "type": "git",
+    "url": ""
   },
   "author": "David Villavicencio",
   "license": "private",
   "private": true,
-  "dependencies": {
-	"bourbon": "4.2.6",
-	"bourbon-neat": "1.7.2",
-	"grunt": "0.4.5",
-	"grunt-contrib-jst": "0.6.0",
-	"grunt-sass": "1.1.0",
-	"load-grunt-tasks": "3.3.0",
-	"matchdep": "1.0.0"
-  },
   "devDependencies": {
-	"grunt-closurecompiler": "^0.9.9",
-	"node-sass": "^3.4.2"
+    "grunt-cli": "0.1.13",
+    "grunt": "0.4.5",
+    "grunt-closurecompiler": "0.9.9",
+    "node-sass": "3.4.2",
+    "grunt-contrib-jst": "0.6.0",
+    "load-grunt-tasks": "3.3.0",
+    "grunt-sass": "1.1.0",
+    "bourbon": "4.2.6",
+    "bourbon-neat": "1.7.2",
+    "matchdep": "1.0.0"
   }
 }
