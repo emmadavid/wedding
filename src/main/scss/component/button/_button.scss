@@ -1,0 +1,41 @@
+.button {
+	@extend .z-depth-0;
+	@include tap-highlight-color(transparent);
+	@include transition(.2s ease-out);
+	background-color: $button-color;
+	border-radius: $button-radius;
+	border: none;
+	color: $button-color-raised;
+	cursor: pointer;
+	display: inline-block;
+	font-weight: $button-font-weight;
+	height: $button-height;
+	letter-spacing: .5px;
+	line-height: $button-line-height;
+	outline: 0;
+	padding: 0 2rem;
+	text-align: center;
+	text-decoration:none;
+	text-transform: uppercase;
+	vertical-align: middle;
+
+	font-size: 15px;
+
+	&:hover {
+		@extend .z-depth-1;
+		background-color: lighten($button-color, 5%);
+	}
+}
+
+.button, .button-large {
+	i {
+		font-size: $button-font-size-shared;
+		line-height: inherit;
+	}
+}
+
+.button-large {
+	@extend .button;
+	height: $button-height * 1.5;
+	line-height: 56px;
+}

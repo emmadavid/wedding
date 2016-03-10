@@ -27,6 +27,8 @@ module.exports = {
 			jsPath + '/vendor/slick.min.js',
 			jsPath + '/vendor/velocity.min.js',
 			jsPath + '/vendor/velocity.ui.js',
+			jsPath + '/vendor/hammer-time.min.js',
+			jsPath + '/vendor/waves.js',
 			jsPath + '/vendor/scrollmagic.min.js',
 			jsPath + '/vendor/underscore-min.js',
 			jsPath + '/vendor/backbone-min.js',

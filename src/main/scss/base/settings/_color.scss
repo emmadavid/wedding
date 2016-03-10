@@ -1,3 +1,86 @@
+// Utility Color Classes
+// ------------------------------
+// Google Color Palette defined: http://www.google.com/design/spec/style/color.html
+$materialize-red: (
+	"lighten-5":  #fdeaeb,
+	"lighten-4":  #f8c1c3,
+	"lighten-3":  #f3989b,
+	"lighten-2":  #ee6e73,
+	"lighten-1":  #ea454b,
+	"base":       #e51c23,
+	"darken-1":   #d0181e,
+	"darken-2":   #b9151b,
+	"darken-3":   #a21318,
+	"darken-4":   #8b1014,
+);
+
+$castacencio-red: (
+	"lighten-5":  #fdeaeb,
+	"lighten-4":  #F2D1D2,
+	"lighten-3":  #E5A6A7,
+	"lighten-2":  #D56E71,
+	"lighten-1":  #CE5759,
+	"base":       #C73F42,
+	"darken-1":   #B33437,
+	"darken-2":   #9B2D30,
+	"darken-3":   #842628,
+	"darken-4":   #6C2021,
+);
+
+$shades: (
+	"black":        #000000,
+	"white":        #ffffff,
+	"transparent":  transparent
+);
+
+$colors: (
+	"materialize-red": $materialize-red,
+	"castacencio-red": $castacencio-red,
+	"shades": $shades
+);
+
+// Color Classes
+@each $color_name, $color in $colors {
+	@each $color_type, $color_value in $color {
+		@if $color_type == "base" {
+			.#{$color_name} {
+				background-color: $color_value !important;
+			}
+			.#{$color_name}-text {
+				color: $color_value !important;
+			}
+		}
+		@else {
+			.#{$color_name}.#{$color_type} {
+				background-color: $color_value !important;
+			}
+			.#{$color_name}-text.text-#{$color_type} {
+				color: $color_value !important;
+			}
+		}
+	}
+}
+
+// Shade classes
+@each $color, $color_value in $shades {
+	.#{$color} {
+		background-color: $color_value !important;
+	}
+	.#{$color}-text {
+		color: $color_value !important;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
 // Grays
 // ------------------------------
 $black: #000000;
@@ -7,6 +90,8 @@ $white: #ffffff;
 // Color Palette
 // ------------------------------
 $brand-red: #dd2f37;
+//$secondary-color: color('materialize-red', 'lighten-1');
+$secondary-color: color('castacencio-red', 'base');
 
 // Hero
 // ------------------------------
@@ -14,12 +99,32 @@ $hero-arrow-color: $white;
 
 // Button
 // ------------------------------
-$button-color-default: #c73f42;
-$button-color-hover: darken($button-color-default, 10%);
-$button-color-active: darken($button-color-default, 15%);
+//$button-color-default: #c73f42;
+//$button-color-hover: darken($button-color-default, 10%);
+//$button-color-active: darken($button-color-default, 15%);
+$button-color: $secondary-color;
+$button-color-raised: color('shades', 'white');
 
 // Overlay
 // ------------------------------
 $overlay-color: rgba(28, 21, 19, 0.97);
 $overlay-color-light: rgba(28, 21, 19, 0.5);
 $overlay-close-color: $white;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

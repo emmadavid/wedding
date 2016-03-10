@@ -2,3 +2,7 @@ node_modules
 .sass-cache
 .sqs-cache
 wedding.iml
+sqs/scripts/*
+sqs/styles/*
+src/main/webapp/static/js/templates.js
+tags
