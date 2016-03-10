@@ -1,3 +1,17 @@
+// Media Query Ranges
+$small-screen-up: 601px !default;
+$medium-screen-up: 993px !default;
+$large-screen-up: 1201px !default;
+$small-screen: 600px !default;
+$medium-screen: 992px !default;
+$large-screen: 1200px !default;
+
+$medium-and-up: "only screen and (min-width : #{$small-screen-up})" !default;
+$large-and-up: "only screen and (min-width : #{$medium-screen-up})" !default;
+$small-and-down: "only screen and (max-width : #{$small-screen})" !default;
+$medium-and-down: "only screen and (max-width : #{$medium-screen})" !default;
+$medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width : #{$medium-screen})" !default;
+
 // Type Scale: http://type-scale.com/?size=16&scale=1.414&text=A%20Visual%20Type%20Scale&webfont=Raleway&font-family='Raleway'&font-weight=400&font-family-headers=&font-weight-headers=inherit&background-color=white&font-color=%23333
 
 html {
@@ -98,4 +112,68 @@ section {
 	@include outer-container(100%);
 	@include transition(opacity ($base-duration * 5) $base-timing);
 	opacity: 0;
+}
+
+// Z-levels
+.z-depth-0 {
+	box-shadow: none;
+}
+.z-depth-1{
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.z-depth-1-half{
+	box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+.z-depth-2{
+	box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.z-depth-3{
+	box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+.z-depth-4{
+	box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+}
+.z-depth-5{
+	box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
+}
+
+// Icon Styles
+
+i {
+	line-height: inherit;
+
+	&.left {
+		float: left;
+		margin-right: 15px;
+	}
+	&.right {
+		float: right;
+		margin-left: 15px;
+	}
+	&.tiny {
+		font-size: 1rem;
+	}
+	&.small {
+		font-size: 2rem;
+	}
+	&.medium {
+		font-size: 4rem;
+	}
+	&.large {
+		font-size: 6rem;
+	}
+
+	font-family: 'squarespace-ui-font';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+	@include font-feature-settings('liga kern pnum');
+	@include font-smoothing;
 }
