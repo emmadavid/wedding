@@ -1,66 +1,49 @@
-.gallery .gallery-row li  {
-	display: block;
-	float: left;
-	opacity: 0;
-	padding: 7px;
-	//width: 33%;
-	max-width: 300px;
-	max-height: 300px;
+.gallery .gallery-row li {
+  @include flex-basis(300px);
+  @include flex(4em 1 0);
+  display: block;
+  float: left;
+  height: 300px;
+  margin: 0 0 20px 20px;
+  max-height: 300px;
+  max-width: 300px;
+  min-height: 300px;
+  min-width: 300px;
+  opacity: 0;
+  padding: 7px;
+  width: 300px;
 
-	flex: 4em 1 0;
-	flex-basis: 300px;
-	min-width: 300px;
-	min-height: 300px;
-	width: 300px;
-	height: 300px;
-	margin: 0 0 20px 20px;
+  @include media($mobile) {
+    margin-left: 0;
+  }
 
-	@include media($mobile) {
-		margin-left: 0;
-	}
+  a,
+  img {
+    border: 0;
+    display: block;
+    outline: none;
+  }
 
-	//max-width: 360px;
-	//margin: 0 auto;
+  &.shown {
+    opacity: 1;
+  }
 
-	a, img {
-		border: none;
-		display: block;
-		//max-width: 100%;
-		outline: none;
-	}
-
-	&.shown {
-		opacity: 1;
-	}
-
-	&.animate {
-		@include animation(popUp .8s ease-in forwards);
-		@include transform(scale(0.4));
-		@include transform-style(preserve-3d);
-	}
+  &.animate {
+    @include animation(popUp .8s ease-in forwards);
+    @include transform(scale(.4));
+    @include transform-style(preserve-3d);
+  }
 }
 
 @include keyframes(popUp) {
-	0% {}
-	70% {
-		@include animation-timing-function(ease-out);
-		@include transform(scale(1.1));
-		opacity: .8;
-	}
-	100% {
-		@include transform(scale(1));
-		opacity: 1;
-	}
-}
+  70% {
+    @include animation-timing-function(ease-out);
+    @include transform(scale(1.1));
+    opacity: .8;
+  }
 
-//@media screen and (max-width: 900px) {
-//	.gallery .gallery-row li {
-//		width: 50%;
-//	}
-//}
-//
-//@media screen and (max-width: 400px) {
-//	.gallery .gallery-row li {
-//		width: 100%;
-//	}
-//}
+  100% {
+    @include transform(scale(1));
+    opacity: 1;
+  }
+}

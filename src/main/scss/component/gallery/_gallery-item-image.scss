@@ -1,117 +1,112 @@
 .gallery figure {
-	//background: #3085a3;
-	cursor: pointer;
-	float: left;
-	height: auto;
-	margin: 10px 1%;
-	//max-height: 360px;
-	max-height: 100%;
-	max-width: 480px;
-	//min-width: 320px;
-	min-width: 98%;
-	overflow: hidden;
-	position: relative;
-	//text-align: center;
-	//width: 48%;
+  cursor: pointer;
+  float: left;
+  height: auto;
+  margin: 10px 1%;
+  max-height: 100%;
+  max-width: 480px;
+  min-width: 98%;
+  overflow: hidden;
+  position: relative;
 
-	img {
-		@include backface-visibility(hidden);
-		@include calc(width, "100% + 20px");
-		@include transform(translate3d(-10px,0,0));
-		@include transition-duration(0.35s, 0.35s);
-		@include transition-property(opacity, transform);
-		display: block;
-		max-width: none;
-		min-height: 100%;
-		//opacity: 0.8;
-		position: relative;
-	}
+  img {
+    @include backface-visibility(hidden);
+    @include calc(width, '100% + 20px');
+    @include transform(translate3d(-10px, 0, 0));
+    @include transition-duration(.35s, .35s);
+    @include transition-property(opacity, transform);
+    display: block;
+    max-width: none;
+    min-height: 100%;
+    position: relative;
+  }
 
-	figcaption {
-		@include backface-visibility(hidden);
-		color: #fff;
-		font-size: 1.25em;
-		padding: 2em;
-		text-align: left;
-		text-transform: uppercase;
+  figcaption {
+    @include backface-visibility(hidden);
+    color: $white;
+    font-size: 1.25em;
+    padding: 2em;
+    text-align: left;
+    text-transform: uppercase;
 
-		&, & > a {
-			height: 100%;
-			left: 0;
-			position: absolute;
-			top: 0;
-			width: 100%;
-		}
+    &,
+    & > a {
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
 
-		& > a {
-			font-size: 0;
-			opacity: 0;
-			text-indent: 200%;
-			white-space: nowrap;
-			z-index: 1000;
-		}
+    a {
+      font-size: 0;
+      opacity: 0;
+      text-indent: 200%;
+      white-space: nowrap;
+      z-index: 1000;
+    }
 
-		&:before, &:after {
-			pointer-events: none;
-		}
-	}
+    &:before,
+    &:after {
+      pointer-events: none;
+    }
+  }
 
-	h2 {
-		font-size: rem(30px);
-		font-weight: 500;
-		line-height: rem(20px);
-		overflow: hidden;
-		padding: 0.5em 0;
-		position: relative;
-		word-spacing: -0.15em;
+  h2 {
+    font-size: rem(30px);
+    font-weight: 500;
+    line-height: rem(20px);
+    overflow: hidden;
+    padding: .5em 0;
+    position: relative;
+    word-spacing: -.15em;
 
-		span {
-			font-weight: 800;
-		}
+    span {
+      font-weight: 800;
+    }
 
-		&:after {
-			@include transform(translate3d(-100%,0,0));
-			@include transition-duration(0.35s);
-			@include transition-property(transform);
-			background: $white;
-			bottom: 0;
-			content: '';
-			height: 3px;
-			left: 0;
-			position: absolute;
-			width: 100%;
-		}
-	}
+    &:after {
+      @include transform(translate3d(-100%, 0, 0));
+      @include transition-duration(.35s);
+      @include transition-property(transform);
+      background: $white;
+      bottom: 0;
+      content: '';
+      height: 3px;
+      left: 0;
+      position: absolute;
+      width: 100%;
+    }
+  }
 
-	h2, p {
-		margin: 0;
-	}
+  h2,
+  p {
+    margin: 0;
+  }
 
-	p {
-		@include transform(translate3d(100%,0,0));
-		@include transition-duration(0.35s, 0.35s);
-		@include transition-property(opacity, transform);
-		font-size: 68.5%;
-		font-weight: 400;
-		letter-spacing: 1px;
-		opacity: 0;
-		padding: 1em 0;
-	}
+  p {
+    @include transform(translate3d(100%, 0, 0));
+    @include transition-duration(.35s, .35s);
+    @include transition-property(opacity, transform);
+    font-size: 68.5%;
+    font-weight: 400;
+    letter-spacing: 1px;
+    opacity: 0;
+    padding: 1em 0;
+  }
 
-	&:hover {
-		img {
-			@include transform(translate3d(0,0,0));
-		}
+  &:hover {
+    img {
+      @include transform(translate3d(0, 0, 0));
+    }
 
-		h2 {
-			&:after {
-				@include transform(translate3d(0,0,0));
-			}
-		}
+    h2:after {
+      @include transform(translate3d(0, 0, 0));
+    }
 
-		p {
-			opacity: 1;
-			@include transform(translate3d(0,0,0));
-		}
-	}
+    p {
+      @include transform(translate3d(0, 0, 0));
+      opacity: 1;
+    }
+  }
 }
