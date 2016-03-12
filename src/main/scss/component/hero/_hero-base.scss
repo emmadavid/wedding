@@ -1,94 +1,91 @@
 &.slick-slider {
-	@include touch-action( pan-y );
-	@include tap-highlight-color( transparent );
-	@include no-select;
-	box-sizing: border-box;
-	display: block;
-	position: relative;
+  @include touch-action(pan-y);
+  @include tap-highlight-color(transparent);
+  @include no-select;
+  box-sizing: border-box;
+  display: block;
+  position: relative;
 }
 
 .slick-list {
-	display: block;
-	margin: 0;
-	overflow: hidden;
-	padding: 0;
-	position: relative;
+  display: block;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
 
-	&:focus {
-		outline: none;
-	}
+  &:focus {
+    outline: none;
+  }
 
-	&.dragging {
-		cursor: hand;
-	}
+  &.dragging {
+    cursor: hand;
+  }
 
-	.slick-loading & {
-		background: $white url( $loading-url ) center center no-repeat;
-	}
+  .slick-loading & {
+    background: $white url($loading-url) center center no-repeat;
+  }
 }
 
 &.slick-slider .slick-track,
 &.slick-slider .slick-list {
-	@include transform( translate3d( 0, 0, 0 ) );
+  @include transform(translate3d(0, 0, 0));
 }
 
 .slick-track {
-	display: block;
-	left: 0;
-	position: relative;
-	top: 0;
+  display: block;
+  left: 0;
+  position: relative;
+  top: 0;
 
-	&:before,
-	&:after {
-		content: "";
-		display: table;
-	}
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
 
-	&:after {
-		clear: both;
-	}
+  &:after {
+    clear: both;
+  }
 
-	.slick-loading & {
-		visibility: hidden;
-	}
+  .slick-loading & {
+    visibility: hidden;
+  }
 }
 
 .slick-slide {
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px;
 
+  [dir="rtl"] & {
+    float: right;
+  }
 
+  img {
+    display: block;
+  }
 
-	display: none;
-	float: left;
-	height: 100%;
-	min-height: 1px;
+  &.slick-loading img {
+    display: none;
+  }
 
-	[dir="rtl"] & {
-		float: right;
-	}
+  &.dragging img {
+    pointer-events: none;
+  }
 
-	img {
-		display: block;
-	}
+  .slick-initialized & {
+    display: block;
+  }
 
-	&.slick-loading img {
-		display: none;
-	}
+  .slick-loading & {
+    visibility: hidden;
+  }
 
-	&.dragging img {
-		pointer-events: none;
-	}
-
-	.slick-initialized & {
-		display: block;
-	}
-
-	.slick-loading & {
-		visibility: hidden;
-	}
-
-	.slick-vertical & {
-		border: 1px solid transparent;
-		display: block;
-		height: auto;
-	}
+  .slick-vertical & {
+    border: 1px solid transparent;
+    display: block;
+    height: auto;
+  }
 }
