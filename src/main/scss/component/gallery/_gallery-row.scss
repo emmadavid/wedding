@@ -1,6 +1,8 @@
 .gallery-row {
   margin: 0 0 30px;
   max-width: 1000px;
+  position: absolute;
+  top: 30px;
 
   ul {
     @include display(flex);

@@ -14,4 +14,11 @@
   top: 0;
   width: 100%;
   z-index: $gallery-zindex;
+
+  .close {
+    position: absolute;;
+    right: 0;
+    top: 0;
+    z-index: $gallery-overlay-close-zindex;
+  }
 }
