@@ -1,6 +1,6 @@
 .gallery .gallery-row li {
   @include flex-basis(300px);
-  @include flex(4em 1 0);
+  @include flex(300px 1 0);
   display: block;
   float: left;
   height: 300px;
