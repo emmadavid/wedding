@@ -1,12 +1,8 @@
 .instagram-images {
-	@include clearfix;
-	display: -webkit-flex;
-	display: flex;
-	-webkit-flex-direction: row;
-	flex-direction: row;
-	-webkit-align-items: center;
-	align-items: center;
-	-webkit-justify-content: center;
-	justify-content: center;
-	flex-wrap: wrap;
+  @include align-items(center);
+  @include clearfix;
+  @include flex-wrap(wrap);
+  @include justify-content(center);
+  @include display(flex);
+  @include flex-direction(row);
 }

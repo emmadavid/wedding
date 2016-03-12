@@ -1,28 +1,24 @@
 .instagram-image {
-	float: left;
-	margin: 0 1vw 2vw 1vw;
-	height: 31vw;
-	width: 31vw;
-	max-height: 290px;
-	max-width: 290px;
-	overflow: hidden;
+  float: left;
+  height: 31vw;
+  margin: 0 1vw 2vw;
+  max-height: 290px;
+  max-width: 290px;
+  overflow: hidden;
+  width: 31vw;
 
-	a {
-		transition: transform .15s ease-in-out;
-		display: inline-block;
-		height: 100%;
-		width: 100%;
+  a {
+    @include background-size(cover);
+    @include transition(all .15s ease-in-out);
+    background-attachment: scroll;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
 
-		background-repeat: no-repeat;
-		background-position: center center;
-		background-attachment: scroll;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
-
-		&:hover {
-			transform: scale(1.15);
-		}
-	}
+    &:hover {
+      @include transform(scale(1.15));
+    }
+  }
 }
