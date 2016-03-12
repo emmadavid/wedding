@@ -1,6 +1,6 @@
 &.slick-slider {
   @include touch-action(pan-y);
-  @include tap-highlight-color(transparent);
+  @include tap-highlight-color($transparent);
   @include no-select;
   box-sizing: border-box;
   display: block;
@@ -84,7 +84,7 @@
   }
 
   .slick-vertical & {
-    border: 1px solid transparent;
+    border: 1px solid $transparent;
     display: block;
     height: auto;
   }
