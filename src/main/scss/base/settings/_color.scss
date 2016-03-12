@@ -83,9 +83,9 @@ $colors: (
 
 // Grays
 // ------------------------------
-$black: #000000;
+$black: color('shades', 'black');
 $gray-darkest: #060606;
-$white: #ffffff;
+$white: color('shades', 'white');
 
 // Color Palette
 // ------------------------------
@@ -110,21 +110,3 @@ $button-color-raised: color('shades', 'white');
 $overlay-color: rgba(28, 21, 19, 0.97);
 $overlay-color-light: rgba(28, 21, 19, 0.5);
 $overlay-close-color: $white;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

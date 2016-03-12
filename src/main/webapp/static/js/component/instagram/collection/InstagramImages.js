@@ -79,8 +79,8 @@ Castacencio.Collection.InstagramImages = Backbone.Collection.extend({
 				this.url = null;
 			}
 
-			return (imageDate > this.startDate)
-				&& _.indexOf(this.blacklist, image.id) === -1;
+			return (imageDate > this.startDate) &&
+				_.indexOf(this.blacklist, image.id) === -1;
 		}, this);
 
 		this.imagesAdded += images.length;

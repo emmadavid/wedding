@@ -1,0 +1,8 @@
+@mixin mask-image($val) {
+  // scss-lint:disable VendorPrefix
+  -webkit-mask-image: $val;
+  -moz-mask-image: $val;
+  -ms-mask-image: $val;
+  -o-mask-image: $val;
+  mask-image: $val;
+}
