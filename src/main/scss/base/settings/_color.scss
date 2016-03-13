@@ -2,29 +2,38 @@
 // ------------------------------
 // Google Color Palette defined: http://www.google.com/design/spec/style/color.html
 $castacencio-red: (
-  "lighten-5": #fdeaeb,
-  "lighten-4": #f2d1d2,
-  "lighten-3": #e5a6a7,
-  "lighten-2": #d56e71,
-  "lighten-1": #ce5759,
-  "base":      #c73f42,
-  "darken-1":  #b33437,
-  "darken-2":  #9b2d30,
-  "darken-3":  #842628,
-  "darken-4":  #6c2021
+  'lighten-5': #fdeaeb,
+  'lighten-4': #f2d1d2,
+  'lighten-3': #e5a6a7,
+  'lighten-2': #d56e71,
+  'lighten-1': #ce5759,
+  'base':      #c73f42,
+  'darken-1':  #b33437,
+  'darken-2':  #9b2d30,
+  'darken-3':  #842628,
+  'darken-4':  #6c2021
 );
 
  // scss-lint:disable ColorVariable
 $shades: (
-  "transparent": transparent,
-  "white": #fff,
-  "black": #000
+  'transparent': transparent,
+  'white':     #fff,
+  'lighten-4': #c0c1c3,
+  'lighten-3': #a3a5a7,
+  'lighten-2': #7f8284,
+  'lighten-1': #707275,
+  'base':      #616365,
+  'darken-1':  #525455,
+  'darken-2':  #434446,
+  'darken-3':  #343536,
+  'darken-4':  #252627,
+  'black':     #000
 );
 // scss-lint:enable ColorVariable
 
 $colors: (
-  "castacencio-red": $castacencio-red,
-  "shades": $shades
+  'castacencio-red': $castacencio-red,
+  'shades': $shades
 );
 
 // Generate color placeholders

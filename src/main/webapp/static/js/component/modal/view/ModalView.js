@@ -1,7 +1,7 @@
 Castacencio.View.ModalView = Backbone.View.extend({
 
 	tagName: 'div',
-	className: 'md-modal md-effect-12',
+	className: 'modal',
 
 	template: window['Castacencio']['modal-template'],
 
@@ -26,9 +26,9 @@ Castacencio.View.ModalView = Backbone.View.extend({
 
 		return this;
 	},
-	
+
 	showModal: function() {
-		this.$el.addClass('md-show');
+		this.$el.addClass('show');
 		$('html').addClass('no-scroll');
 	},
 
@@ -36,7 +36,7 @@ Castacencio.View.ModalView = Backbone.View.extend({
 		event.preventDefault();
 
 		var that = this;
-		this.$el.removeClass('md-show');
+		this.$el.removeClass('show');
 		$('html').removeClass('no-scroll');
 		this.$el.one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
 			that.destroy();

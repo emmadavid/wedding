@@ -26,7 +26,7 @@
         {.end}
         <squarespace:navigation navigationId="site-nav" template="top-navigation"/>
     </header>
-    <a class="hamburger-menu" data="hamburger-menu">
+    <a class="nav-button" data="nav-button">
         <b></b>
         <b></b>
         <b></b>

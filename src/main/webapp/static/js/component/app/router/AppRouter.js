@@ -45,7 +45,7 @@ Castacencio.Router.AppRouter = Backbone.Router.extend({
 		});
 
 		Castacencio.view.hamburgerMenuView = new Castacencio.View.HamburgerMenuView({
-			el: $('.hamburger-menu')
+			el: $('.nav-button')
 		});
 
 		Castacencio.view.overlayNavView = new Castacencio.View.OverlayNavView({

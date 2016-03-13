@@ -1,123 +1,110 @@
-.md-modal {
-	@include backface-visibility(hidden);
-	background: #616365;
-	//@include transform(translateX(-50%) translateY(-50%));
-	//height: auto;
-	//left: 50%;
-	//max-width: 630px;
-	//min-width: 320px;
-	position: fixed;
-	//top: 50%;
-	visibility: hidden;
-	//width: 50%;
-	z-index: 3;
+.modal {
+  @include backface-visibility(hidden);
+  @include overflow-scrolling;
+  background: color('shades', 'base');
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  overflow-y: scroll;
+  position: fixed;
+  right: 0;
+  top: 0;
+  visibility: hidden;
+  width: 100%;
+  z-index: 3;
 
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
+  img {
+    width: auto;
+  }
 
-	overflow-y: scroll;
-	-webkit-overflow-scrolling:touch;
-
-	img {
-		width: auto;
-	}
-}
-
-.md-show {
-	visibility: visible;
+  &.show {
+    visibility: visible;
+  }
 }
 
 .md-overlay {
-	@include transition(all 0.3s);
-	background: #616365;
-	height: 100%;
-	left: 0;
-	opacity: 0;
-	position: fixed;
-	top: 0;
-	visibility: hidden;
-	width: 100%;
-	z-index: 2;
+  @include transition(all .3s);
+  background: color('shades', 'base');
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  visibility: hidden;
+  width: 100%;
+  z-index: 2;
 }
 
-.md-show ~ .md-overlay {
-	opacity: 1;
-	visibility: visible;
+.show ~ .md-overlay {
+  opacity: 1;
+  visibility: visible;
 }
 
 .md-content {
-	background: #616365;
-	border-radius: 3px;
-	color: $white;
-	margin: 0 auto;
-	position: static;
-	padding-top: 40px;
-	max-width: 680px;
+  background: color('shades', 'base');
+  border-radius: 3px;
+  color: $white;
+  margin: 0 auto;
+  max-width: 680px;
+  padding-top: 40px;
+  position: static;
 }
 
 .md-content h3 {
-	background: rgba(0, 0 ,0 , 0.1);
-	border-radius: 3px 3px 0 0;
-	font-size: 2.4em;
-	font-weight: 400;
-	margin: 0;
-	opacity: 0.8;
-	padding: 0.4em;
-	text-align: left;
+  font-size: 2.4em;
+  font-weight: 400;
   margin-left: 20px;
+  margin: 0;
+  opacity: .8;
+  padding: .4em;
+  text-align: left;
 }
 
 .md-content > div {
-	font-size: 1.15em;
-	font-weight: 300;
-	margin: 0;
-	padding: 15px 40px 30px;
+  font-size: 1.15em;
+  font-weight: 300;
+  margin: 0;
+  padding: 15px 40px 30px;
 }
 
 .md-content > div p {
-	margin: 0;
-	padding: 10px 0;
-	color: rgba(255, 255, 255, 0.6);
-	font-weight: 400;
+  color: rgba(255, 255, 255, .6);
+  font-weight: 400;
+  margin: 0;
+  padding: 10px 0;
 }
 
 .md-content > div ul {
-	margin: 0;
-	padding: 0 0 30px 20px;
+  margin: 0;
+  padding: 0 0 30px 20px;
 }
 
 .md-content > div ul li {
-	padding: 5px 0;
+  padding: 5px 0;
 }
 
 .md-content button {
-	display: block;
-	margin: 0 auto;
-	font-size: 0.8em;
+  display: block;
+  margin: 0 auto;
+  font-size: .8em;
 }
 
-
-
-.md-effect-12 .md-content {
-	@include transform(scale(0.8));
-	@include transition(all, 0.3s);
-	opacity: 0;
+.md-content {
+  @include transform(scale(0.8));
+  @include transition(all, 0.3s);
+  opacity: 0;
 }
 
-.md-show.md-effect-12 ~ .md-overlay {
-	background: #616365;
+.show ~ .md-overlay {
+  background: color('shades', 'base');
 }
 
-.md-effect-12 .md-content h3,
-.md-effect-12 .md-content {
-	background: transparent;
+.md-content h3,
+.md-content {
+  background: transparent;
 }
 
-.md-show.md-effect-12 .md-content {
-	@include transform(scale(1));
-	opacity: 1;
+.show .md-content {
+  @include transform(scale(1));
+  opacity: 1;
 }

@@ -14,7 +14,7 @@ Castacencio.View.ScrollControllerView = Backbone.View.extend({
 			offset: 75      // start this scene after scrolling for 50px
 		})
 			.setPin("nav") // pins the element for the the scene's duration
-			.setClassToggle("nav","float")
+			.setClassToggle("nav","floating")
 			.addTo(controller); // assign the scene to the controller
 
 		var accommodationsScene = new ScrollMagic.Scene({
@@ -65,7 +65,3 @@ Castacencio.View.ScrollControllerView = Backbone.View.extend({
 	}
 
 });
-
-
-
-
