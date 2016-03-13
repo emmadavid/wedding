@@ -9,10 +9,6 @@
     @include media($mobile) {
       left: 50%;
       text-align: center;
-
-      &:after {
-        display: none;
-      }
     }
 
     a {
@@ -44,6 +40,10 @@
       top: 0;
       width: 100%;
       z-index: $section-story-names-zindex;
+
+      @include media($mobile) {
+        display: none;
+      }
     }
   }
 
