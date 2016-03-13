@@ -23,8 +23,8 @@ section {
   h2 {
     &.contrasting-title {
       background-color: $white;
-      border-bottom: 2px solid color('castacencio-red', 'base');
-      color: color('castacencio-red', 'base');
+      border-bottom: 2px solid rgba(color('castacencio-red', 'base'), .9);
+      color: rgba(color('castacencio-red', 'base'), .9);
       font-weight: 500;
       height: $contrasting-title-height;
       line-height: $contrasting-title-line-height;
