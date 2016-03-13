@@ -62,17 +62,15 @@
     width: 100%;
     z-index: $section-story-overlay-zindex;
 
-    @include media($mobile) {
-      .overlay-content {
-        margin: 1rem auto;
-        max-width: none;
-      }
-    }
-
     .overlay-content {
       margin: 5rem auto;
       max-width: 50%;
       position: static;
+
+      @include media($mobile) {
+        margin: 1rem auto;
+        max-width: none;
+      }
 
       p {
         color: rgba(255, 255, 255, .6);
