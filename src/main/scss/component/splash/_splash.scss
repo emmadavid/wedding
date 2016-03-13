@@ -1,0 +1,18 @@
+// scss-lint:disable IdSelector
+#splash {
+  height: 100vh;
+  position: absolute;
+  width: 100vw;
+  z-index: $splash-zindex;
+
+  > div {
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: 0;
+    height: 90vh;
+    position: absolute;
+    width: 92vw;
+  }
+}
+// scss-lint:enable IdSelector

@@ -1,67 +1,69 @@
-section#bridal-squad {
-	div.ladies,
-	div.gents {
-		height: 100%;
-		position: absolute;
-		width: 50%;
+// scss-lint:disable QualifyingElement IdSelector
+#bridal-squad { // scss-lint:enable IdSelector
+  div.ladies,
+  div.gents {
+    height: 100%;
+    position: absolute;
+    width: 50%;
 
-		h2 {
-			@include transition(all ($base-duration * 2) $base-timing);
-			display: inline-block;
-			margin: 28% 0 0 0;
-			max-width: 100%;
+    h2 {
+      @include transition(all ($base-duration * 2) $base-timing);
+      display: inline-block;
+      margin: 28% 0 0;
+      max-width: 100%;
 
-			&:after {
-				display: inline-block;
-				height: 3px;
-				width: 100%;
-				content: '';
-				background-color: $white;
-				position: relative;
-				top: -51px;
-			}
+      @include media($mobile) {
+        margin-top: 70%;
+        text-align: center;
+      }
 
-			@include media($mobile) {
-				margin-top: 70%;
-				text-align: center;
-			}
-		}
+      &:after {
+        background-color: $white;
+        content: '';
+        display: inline-block;
+        height: 3px;
+        position: relative;
+        top: -51px;
+        width: 100%;
+      }
+    }
 
-		a {
-			display: inline-block;
-			padding-left: 40px;
-			padding-right: 40px;
-			line-height: 31px;
-			color: white;
+    a {
+      color: $white;
+      display: inline-block;
+      line-height: 31px;
+      padding-left: 40px;
+      padding-right: 40px;
 
-			@include media($mobile) {
-				line-height: 35px;
-				padding-left: 0;
-				padding-right: 0;
-			}
-		}
-	}
+      @include media($mobile) {
+        line-height: 35px;
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
 
-	div.ladies {
-		text-align: right;
+  div.ladies {
+    text-align: right;
 
-		h2 {
-			&:after {
-				background-color: #d7ae1d;
-			}
-		}
+    h2 {
+      &:after {
+        background-color: $section-squad-accent-color;
+      }
+    }
 
-		a {
-			color: #d7ae1d;
-		}
-	}
+    a {
+      color: $section-squad-accent-color;
+    }
+  }
 
-	div.gents {
-		text-align: left;
-		right: 0;
-	}
+  div.gents {
+    right: 0;
+    text-align: left;
+  }
 
-	&:after {
-		padding-top: percentage($section-image-bridal-squad-height / $section-image-bridal-squad-width);
-	}
+  &:after {
+    padding-top: percentage($section-image-bridal-squad-height / $section-image-bridal-squad-width);
+  }
 }
+// scss-lint:enable QualifyingElement

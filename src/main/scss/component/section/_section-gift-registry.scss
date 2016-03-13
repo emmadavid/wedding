@@ -1,34 +1,33 @@
-#gift-registry {
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-attachment: scroll;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+// scss-lint:disable IdSelector
+#gift-registry { // scss-lint:enable IdSelector
+  @include background-size(cover);
+  background-attachment: scroll;
+  background-position: center center;
+  background-repeat: no-repeat;
 
-	@include media($mobile) {
-		min-height: 55vh;
-	}
+  @include media($mobile) {
+    min-height: 55vh;
+  }
 
-	a {
-		-webkit-mask: url("/assets/zola.svg") no-repeat center;
-		display: block;
-		position: absolute;
-		width: 33%;
-		height: 28%;
-		top: 33%;
-		left: 33%;
-		background-color: $white;
+  a {
+    background-color: $white;
+    display: block;
+    height: 28%;
+    left: 33%;
+    // scss-lint:disable VendorPrefix
+    -webkit-mask: url('/assets/zola.svg') no-repeat center;
+    position: absolute;
+    top: 33%;
+    width: 33%;
 
-		&:hover {
-			background-color: #F6546A;
-		}
-	}
+    &:hover {
+      background-color: color('castacencio-red', 'lighten-1');
+    }
+  }
 
-	&:after {
-		content: '';
-		display: block;
-		padding-top: percentage($section-image-gift-registry-height / $section-image-gift-registry-width);
-	}
+  &:after {
+    content: '';
+    display: block;
+    padding-top: percentage($section-image-gift-registry-height / $section-image-gift-registry-width);
+  }
 }

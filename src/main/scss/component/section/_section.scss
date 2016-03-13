@@ -1,45 +1,45 @@
 section {
-	&.cover-image {
-		@include background-size(cover);
-		background-attachment: scroll;
-		background-position: center;
-		background-repeat: no-repeat;
-		overflow: visible;
+  &.cover-image {
+    @include background-size(cover);
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: visible;
 
-		&:after {
-			content: "";
-			display: block;
-		}
-	}
+    &:after {
+      content: '';
+      display: block;
+    }
+  }
 
-	&.contrasting-title {
-		margin-top: $contrasting-title-height;
+  &.contrasting-title {
+    margin-top: $contrasting-title-height;
 
-		@include media($mobile) {
-			margin-top: $contrasting-title-height-mobile
-		}
-	}
+    @include media($mobile) {
+      margin-top: $contrasting-title-height-mobile;
+    }
+  }
 
-	h2 {
-		&.contrasting-title {
-			background-color: $white;
-			border-bottom: 2px solid $brand-red;
-			color: $brand-red;
-			font-weight: 500;
-			height: $contrasting-title-height;
-			line-height: $contrasting-title-line-height;
-			margin: 0;
-			position: absolute;
-			text-indent: 10%;
-			top: -$contrasting-title-height;
-			width: 100%;
+  h2 {
+    &.contrasting-title {
+      background-color: $white;
+      border-bottom: 2px solid color('castacencio-red', 'base');
+      color: color('castacencio-red', 'base');
+      font-weight: 500;
+      height: $contrasting-title-height;
+      line-height: $contrasting-title-line-height;
+      margin: 0;
+      position: absolute;
+      text-indent: 10%;
+      top: -$contrasting-title-height;
+      width: 100%;
 
-			@include media($mobile) {
-				font-size: 2em;
-				height: $contrasting-title-height-mobile;
-				line-height: $contrasting-title-line-height-mobile;
-				top: -$contrasting-title-height-mobile;
-			}
-		}
-	}
+      @include media($mobile) {
+        font-size: 2em;
+        height: $contrasting-title-height-mobile;
+        line-height: $contrasting-title-line-height-mobile;
+        top: -$contrasting-title-height-mobile;
+      }
+    }
+  }
 }

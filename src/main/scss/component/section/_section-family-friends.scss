@@ -1,44 +1,45 @@
-// TODO: Clean up with settings/variables.
-#family-and-friends {
-	background-color: $white;
-	padding-bottom: 20px;
+// scss-lint:disable IdSelector
+#family-and-friends { // scss-lint:enable IdSelector
+  background-color: $white;
+  padding-bottom: 20px;
 
-	h2 {
-		color: #f6546a;
-		font-weight: 200;
-		font-size: 17vw;
-		margin: 0;
-		text-align: center;
-	}
+  h2 {
+    color: color('castacencio-red', 'lighten-2');
+    font-size: 17vw;
+    font-weight: 200;
+    margin: 0;
+    text-align: center;
+  }
 
-	.accordion h2 {
-		font-size: 2em;
-	}
+  .accordion h2 {
+    font-size: 2em;
+  }
 
-	p {
-		color: #666666;
-		font-weight: 400;
-		margin: 0;
+  p {
+    color: color('shades', 'base');
+    font-weight: 400;
+    margin: 0;
 
-		&:last-of-type {
-			color: $black;
-			font-weight: 300;
-			margin-top: 2em;
-		}
-	}
+    &:last-of-type {
+      color: $black;
+      font-weight: 300;
+      margin-top: 2em;
+    }
+  }
 
-	.content {
-		padding: 20px 11% 40px 11%;
-	}
+  .content {
+    padding: 20px 11% 40px;
+  }
 
-	#hashtag {
-		color: #f6546a;
-		font-weight: 300;
-		margin-bottom: 20px;
-		text-align: center;
+  // scss-lint:disable IdSelector
+  #hashtag { // scss-lint:enable IdSelector
+    color: color('castacencio-red', 'lighten-2');
+    font-weight: 300;
+    margin-bottom: 20px;
+    text-align: center;
 
-		span {
-			color: #666666;
-		}
-	}
+    span {
+      color: color('shades', 'base');
+    }
+  }
 }

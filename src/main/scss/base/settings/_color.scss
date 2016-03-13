@@ -89,11 +89,6 @@ $gray-darkest: #060606;
 $black: color('shades', 'black');
 // scss-lint:enable ColorVariable
 
-// Color Palette
-// ------------------------------
-$brand-red: #dd2f37;
-$secondary-color: color('castacencio-red', 'base');
-
 // Hero
 // ------------------------------
 $hero-arrow-color: $white;
@@ -108,3 +103,7 @@ $button-color-raised: $white;
 $overlay-color: rgba(28, 21, 19, .97);
 $overlay-color-light: rgba(28, 21, 19, .5);
 $overlay-close-color: $white;
+
+// Overlay
+// ------------------------------
+$section-squad-accent-color: #d7ae1d;

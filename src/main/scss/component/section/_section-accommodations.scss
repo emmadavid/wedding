@@ -1,41 +1,43 @@
-section#accommodations {
-	h3 {
-		font-size: 1.75em;
-		margin-bottom: 0;
-		text-transform: none;
+// scss-lint:disable IdSelector
+#accommodations { // scss-lint:enable IdSelector
+  h3 {
+    font-size: 1.75em;
+    margin-bottom: 0;
+    text-transform: none;
 
-		@include media($mobile) {
-			font-size: 1.64em;
-		}
-	}
+    @include media($mobile) {
+      font-size: 1.64em;
+    }
+  }
 
-	p {
-		font-size: 1.125em;
-		font-weight: 400;
-		margin-top: 0;
-	}
+  p {
+    font-size: 1.125em;
+    font-weight: 400;
+    margin-top: 0;
+  }
 
-	.content-container {
-		background-color: $overlay-color-light;
-		height: 100%;
-		position: absolute;
-		width: 100%;
+  .content-container {
+    background-color: $overlay-color-light;
+    height: 100%;
+    position: absolute;
+    width: 100%;
 
-		.content {
-			margin: 22% 10%;
-			max-width: 400px;
+    h3,
+    p {
+      text-shadow: 1px 1px 2px rgba(28, 21, 19, 1);
+    }
 
-			h3, p {
-				text-shadow: 1px 1px 2px rgba(28, 21, 19, 1);
-			}
-		}
-	}
+    .content {
+      margin: 22% 10%;
+      max-width: 400px;
+    }
+  }
 
-	.button {
-		margin-top: -10px;
-	}
+  .button {
+    margin-top: -10px;
+  }
 
-	&:after {
-		padding-top: percentage($section-image-accommodations-height / $section-image-accommodations-width);
-	}
+  &:after {
+    padding-top: percentage($section-image-accommodations-height / $section-image-accommodations-width);
+  }
 }
