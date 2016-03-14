@@ -2,7 +2,7 @@
 <html xmlns:squarespace="">
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <meta charset="utf-8" />
     {squarespace-headers}
 </head>
@@ -56,6 +56,7 @@
 
 
         <section id="sneak-peek">
+            <squarespace:block-field id="rsvp-form" columns="12" />
             <squarespace:block-field id="sneak-peek-content" columns="12"/>
             <ul>
                 <squarespace:query collection="sneak-peek-gallery">

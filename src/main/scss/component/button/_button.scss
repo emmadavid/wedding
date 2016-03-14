@@ -1,13 +1,15 @@
-.button {
+%button {
+  // scss-lint:disable ImportantRule
   @extend %z-depth-0;
   @include tap-highlight-color(transparent);
   @include transition(.2s ease-out);
   background-color: $button-color;
   border: 0;
-  border-radius: $button-radius;
+  border-radius: $button-radius !important;
   color: $button-color-raised;
   cursor: pointer;
   display: inline-block;
+  font-family: inherit;
   font-size: 15px;
   font-weight: $button-font-weight;
   height: $button-height;
@@ -34,7 +36,8 @@
 	}
 }
 
-.button-large {
+.button-large,
+[type=submit].button {
   @extend %button;
   height: $button-height * 1.5;
   line-height: 56px;

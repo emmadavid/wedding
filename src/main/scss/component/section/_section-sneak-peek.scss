@@ -1,56 +1,57 @@
-// TODO: Clean up with settings/variables.
-#sneak-peek {
-	background-color: $white;
-	padding: 65px;
+// scss-lint:disable IdSelector
+#sneak-peek { // scss-lint:enable IdSelector
+  background-color: $white;
+  color: color('shades', 'base');
+  padding: 65px;
 
-	h2, h3, p {
-		color: $black;
-	}
+  @include media($mobile) {
+    padding: 65px 35px 35px;
+  }
 
-	h2, h3 {
-		font-weight: 200;
-	}
+  h2,
+  h3 {
+    font-weight: 200;
+  }
 
-	h2 {
-		font-size: 40px;
-		margin-top: 0;
-	}
+  h2 {
+    font-size: 40px;
+    margin-top: 0;
+  }
 
-	h3 {
-		font-size: 23px;
+  h3 {
+    font-size: 23px;
 
-		@include media($mobile) {
-			margin-top: 5%;
-		}
-	}
+    @include media($mobile) {
+      margin-top: 5%;
+    }
+  }
 
-	ul {
-		margin: 0 auto;
+  ul {
+    list-style: none;
+    margin: 0 auto;
 
-		@include media($mobile) {
-			margin-top: 10%;
-		}
-	}
+    @include media($mobile) {
+      margin-top: 10%;
+    }
+  }
 
-	li {
-		float: left;
-		width: 30%;
-		margin-left: 5%;
+  li {
+    float: left;
+    margin-left: 5%;
+    width: 30%;
 
-		&:first-child {
-			margin-left: 0;
-		}
+    @include media($mobile) {
+      margin-left: 0;
+      margin-top: 10%;
+      width: 100%;
+    }
 
-		@include media($mobile) {
-			width: 100%;
-			margin-left: 0;
-			margin-top: 10%;
-		}
+    &:first-child {
+      margin-left: 0;
+    }
+  }
 
-
-	}
-
-	img {
-		width: auto;
-	}
+  img {
+    width: auto;
+  }
 }

@@ -1,0 +1,70 @@
+// scss-lint:disable IdSelector
+#rsvp-form {
+  @include align-items(center);
+  @include flex-direction(row);
+  @include justify-content(center);
+  display: none;
+  margin-bottom: -60px;
+
+  @include media($mobile) {
+    [type='radio'] {
+      @include appearance(none);
+      &:checked {
+        background-color: $button-color;
+      }
+    }
+  }
+
+  > .sqs-row {
+    @include flex-basis(800px);
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  input:not([type='radio']),
+  textarea {
+    @include appearance(none);
+  }
+
+  .title {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .radio {
+    margin-bottom: 40px;
+
+    .option {
+      float: left;
+
+      &:last-child {
+        margin-left: 60px;
+      }
+    }
+  }
+
+  .show-form & {
+    @include display(flex);
+  }
+}
+
+#sneak-peek.show-form {
+  min-height: initial;
+
+  @include media($mobile) {
+    padding: 30px;
+
+    h2 {
+      font-size: 26px;
+      text-align: left;
+    }
+  }
+
+  #sneak-peek-content,
+  ul {
+    display: none;
+  }
+}
+// scss-lint:enable IdSelector

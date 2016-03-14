@@ -1,86 +1,94 @@
 Castacencio.Router.AppRouter = Backbone.Router.extend({
 
-	// TODO: usescrollspy to load individually.
-	routes: {
-		'': 'render'
-	},
+  // TODO: usescrollspy to load individually.
+  routes: {
+    '': 'render'
+  },
 
-	initialize: function() {
-		this.splash = $('#splash');
-		this.site = $('#site');
-		this.logo = $('#logo');
-	},
+  initialize: function() {
+    this.splash = $('#splash');
+    this.site = $('#site');
+    this.logo = $('#logo');
+  },
 
-	render: function () {
-		if (!Castacencio.Util.readCookie('skipAnimation')) {
-			this._loadSplashComponent();
-			Backbone.pubSub.on('SPLASH_ANIMATION_END', this.loadModules, this);
-		} else {
-			this.splash.remove();
-			this.logo.show();
-			this.loadModules();
-		}
-	},
+  render: function () {
+    if (!Castacencio.Util.readCookie('skipAnimation')) {
+      this._loadSplashComponent();
+      Backbone.pubSub.on('SPLASH_ANIMATION_END', this.loadModules, this);
+    } else {
+      this.splash.remove();
+      this.logo.show();
+      this.loadModules();
+    }
 
-	loadModules: function() {
-		this._loadNavComponent();
-		this._loadHeroComponent();
-		this._loadOurStoryComponent();
-		this._loadFamilyFriendsComponent();
-		this._loadBridalSquadComponent();
-		this._loadScrollControllerView();
-	},
+    // Temporary code to handle RSVP form under review.
+    YUI().use('querystring-parse', function(Y) {
+      query = Y.QueryString.parse(window.location.search.substr(1));
+    });
+    if (typeof query.rsvp !== 'undefined') {
+      $('#sneak-peek').addClass('show-form');
+    }
+},
 
-	_loadSplashComponent: function() {
-		Castacencio.view.splashView = new Castacencio.View.SplashView({
-			el: this.splash,
-			site: this.site,
-			logo: this.logo
-		});
-	},
+loadModules: function() {
+  this._loadNavComponent();
+  this._loadHeroComponent();
+  this._loadOurStoryComponent();
+  this._loadFamilyFriendsComponent();
+  this._loadBridalSquadComponent();
+  this._loadScrollControllerView();
+},
 
-	_loadNavComponent: function() {
-		Castacencio.view.navView = new Castacencio.View.NavView({
-			el: $( 'nav.top-navigation' )
-		});
+_loadSplashComponent: function() {
+  Castacencio.view.splashView = new Castacencio.View.SplashView({
+    el: this.splash,
+    site: this.site,
+    logo: this.logo
+  });
+},
 
-		Castacencio.view.hamburgerMenuView = new Castacencio.View.HamburgerMenuView({
-			el: $('.nav-button')
-		});
+_loadNavComponent: function() {
+  Castacencio.view.navView = new Castacencio.View.NavView({
+    el: $( 'nav.top-navigation' )
+  });
 
-		Castacencio.view.overlayNavView = new Castacencio.View.OverlayNavView({
-			el: $('.overlay-navigation'),
-			hamburgerMenu: Castacencio.view.hamburgerMenuView
-		});
-	},
+  Castacencio.view.hamburgerMenuView = new Castacencio.View.HamburgerMenuView({
+    el: $('.nav-button')
+  });
 
-	_loadHeroComponent: function() {
-		Castacencio.view.heroView = new Castacencio.View.HeroView({
-			el: $( '#hero' )
-		});
-	},
+  Castacencio.view.overlayNavView = new Castacencio.View.OverlayNavView({
+    el: $('.overlay-navigation'),
+    hamburgerMenu: Castacencio.view.hamburgerMenuView
+  });
+},
 
-	_loadOurStoryComponent: function() {
-		Castacencio.view.ourStoryView = new Castacencio.View.OurStoryView({
-			el: $( '#our-story' )
-		});
-	},
+_loadHeroComponent: function() {
+  Castacencio.view.heroView = new Castacencio.View.HeroView({
+    el: $( '#hero' )
+  });
+},
 
-	_loadFamilyFriendsComponent: function() {
-		Castacencio.view.familyFriendsView = new Castacencio.View.FriendsFamilyView({
-			el: $( '#family-and-friends' )
-		});
-	},
+_loadOurStoryComponent: function() {
+  Castacencio.view.ourStoryView = new Castacencio.View.OurStoryView({
+    el: $( '#our-story' )
+  });
+},
 
-	_loadBridalSquadComponent: function() {
-		Castacencio.view.bridalSquadView = new Castacencio.View.BridalSquadView({
-			el: $( '#bridal-squad' ),
-			overlay: $('.md-overlay')
-		});
-	},
+_loadFamilyFriendsComponent: function() {
+  Castacencio.view.familyFriendsView = new Castacencio.View.FriendsFamilyView({
+    el: $( '#family-and-friends' )
+  });
+},
 
-	_loadScrollControllerView: function() {
-		Castacencio.view.scrollControllerView = new Castacencio.View.ScrollControllerView({});
-	}
+_loadBridalSquadComponent: function() {
+  Castacencio.view.bridalSquadView = new Castacencio.View.BridalSquadView({
+    el: $( '#bridal-squad' ),
+    overlay: $('.md-overlay')
+  });
+},
+
+_loadScrollControllerView: function() {
+  Castacencio.view.scrollControllerView = new Castacencio.View.ScrollControllerView({});
+}
 
 });
